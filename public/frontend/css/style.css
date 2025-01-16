@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'MyCustomFont';  
+    src: url('/public/fonts/FuturaCyrillicMedium.woff') format('woff');
+  }
+
+  
+  :root {
+    --notwhite: #F9F9F9;
+    --pinkwhite: #faf0e6;
+    --darkblue: #0b1b32;
+    --theme: #b4182d;
+    --violet: #54162b;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body p{
+    margin: 0;
+    /* font-family: "Roboto", system-ui; */
+}
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+ol,ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* whatsapp button */
+.whatsapp{
+    height: 40px;
+    width: 40px;
+    z-index: 10;
+    background-color: #25d366;
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wt-remove{
+    display: none;
+}
+.whatsapp .whatsapp-btn{
+    position: absolute;
+    background-color: #25d366;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    border: 0;
+    width: 45px;
+    height: 45px;
+}
+.wclose-btn{
+    position: absolute;
+    cursor: pointer;
+    top: -19px;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    z-index: 20;
+}
+.wclose-btn i{
+    font-size: 18px;
+}
+
+.pulse {
+  animation: pulse-animation 1.2s infinite;
+}
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px #25d366;
+  }
+  100% {
+    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+  }
+}
+
+hr{
+    margin: 0;
+    opacity: 1;
+    border: 1px solid #fff;
+    width: 100px;
+}
+/* .top-section{
+   position: sticky;
+   top: 0;
+} */
+/* top header */
+.top-header{
+    background-color: var(--pinkwhite);
+    /* background-color: #F9F9F9; */
+}
+.top-header p{
+    font-size: 14px;
+    color: var(--darkblue);
+    font-family: 'MyCustomFont', sans-serif ;
+}
+.main-header{
+   /* background-color: var(--darkblue); */
+   background-color: #fff;
+   border-bottom: 1px solid rgb(215, 212, 212);
+   position: sticky;
+   top: 0;
+}
+.input-field{
+    position: relative;
+}
+.search-bar .input-form{
+    width: 85%;
+    height: 50px;
+    outline: none;
+    border: 1px solid rgb(198, 193, 193);
+    border-radius: 5px;
+}
+.search-bar .form-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.search-bar .form-button button{
+    width: 65px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: var(--darkblue);
+    background-color: transparent;
+}
+/* .account{
+    border: 2px solid white;
+}
+.account:hover{
+    border: 2px solid var(--darkblue);
+    border-radius: 5px;
+} */
+.account .cart{
+    position: relative;
+}
+.account span{
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    font-size: 12px;
+    color: var(--notwhite);
+    background-color: var(--theme);
+    border-radius: 50%;
+    top: -3px;
+    right: -10px;
+}
+.account a{
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.account a:hover{
+    color: var(--theme);
+}
+.bottom-header{
+    background-color: #fff;
+    box-shadow: 0 2px 2px -2px gray;
+    position: sticky;
+    top: 67px;
+}
+.bottom-header li{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--darkblue);
+}
+.main-menu{
+    position: relative;
+}
+.child-menu{
+    position: absolute;
+    top: 36px;
+    display: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.3s;
+}
+.main-menu:hover .child-menu{
+    display: block;
+}
+.bottom-header li .fa-chevron-down{
+    font-size: 14px;
+}
+.bottom-header li a{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.bottom-header .main-menu a{
+    border-right: 1px solid rgb(198, 193, 193);
+}
+.bottom-header li a:hover{
+    color: var(--theme);
+}
+.child-menu li{
+    background-color: #fff;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(198, 193, 193);
+    transition: 0.3s;
+    z-index: 100;
+}
+.child-menu li:hover{
+    background-color: var(--pinkwhite);
+}
+.child-menu a{
+    border-right: none !important;
+}
+
+
+/* end of header */
