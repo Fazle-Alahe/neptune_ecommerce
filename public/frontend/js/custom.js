@@ -14,10 +14,10 @@ $(document).ready(function(){
 $(document).ready(function(){
 $('.form-button').hover(
   function() {
-      $('.input-form, .arrow:before').addClass('block');
+      $('.input-form, .arrow').addClass('block');
   },
   function() {
-      $('.input-form, .arrow:before').removeClass('block');
+      $('.input-form, .arrow').removeClass('block');
   }
 );
 });

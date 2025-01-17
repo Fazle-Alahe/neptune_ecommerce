@@ -34,8 +34,7 @@
                 padding:15px 0 !important;
             }
             .main-header .logo{
-                text-align: center;
-                /* margin-bottom: 20px */
+                margin-bottom: 5px;
             }
             .search-bar{
                 position: relative;
@@ -43,7 +42,7 @@
             .search-bar .input-form{
                 width: 250px;
                 position: absolute;
-                top: 50px;
+                top: 45px;
                 left: -80px;
                 background-color: #fff;
                 z-index: 5;
@@ -52,15 +51,14 @@
                 display: none;
             }
             .block{
-                background-color: red;
                 display: block !important;
             }
             
-            .arrow:before {
+            .arrow{
                 position: absolute;
                 content: "";
                 left: -7px;
-                top: 26px;
+                top: 21px;
                 border: 12px solid transparent;
                 border-bottom: 12px solid #54162b;
                 display: none;
@@ -70,7 +68,7 @@
                 margin-right: 30px;
             }
             .form-button button{
-                margin-top: -5px !important;
+                margin-top: -2px !important;
             }
             .account:first-child{
                 margin-right: 25px !important;
@@ -116,9 +114,16 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-8 logo">
-                            <a href="#" class="">
-                                <img src="{{asset('uploads/logo.svg')}}" alt="">
-                            </a>
+                            <div class="row">
+                                <div class="col-4 hamburger d-flex align-items-center">
+                                    <i class="fa-solid fa-bars ms-2"></i>
+                                </div>
+                                <div class="col-8">
+                                    <a href="#" class="">
+                                        <img src="{{asset('uploads/logo.svg')}}" alt="">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-2 text-end">
                             <div class="search-bar">
