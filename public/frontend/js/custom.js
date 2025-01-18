@@ -1,15 +1,56 @@
-// cart item
+// cart
 
 $(document).ready(function(){
-  $(".all-carts").click(function(){
-    $(".cart-details").addClass("active");
+
+  $(".count").on("click", function (e) {
+    // $(".cart-content").toggleClass("cart-toggle");
+    //   e.stopPropagation();
+    alert();
   });
 
-  $(".close-btn").click(function(){
-    $(".cart-details").removeClass("active");
+  $(".cart-close").on("click", function (e) {
+      cartContent.removeClass("cart-toggle");
+      e.stopPropagation();
+  });
+
+  // body.on("click", function () {
+  //     cartContent.removeClass("mini-cart-content-toggle");
+  // }).find(cartContent).on("click", function (e) {
+  //     e.stopPropagation();
+  // });
+
+});
+
+
+$(document).ready(function(){
+  $(".cart").click(function(){
+    $(".cart-content").addClass("cart-toggle");
+    // alert();
+  });
+
+  $(".fa-xmark").click(function(){
+    $(".cart-content").removeClass("cart-toggle");
+    // alert();
   });
 });
 
+$(document).ready(function(){
+  $('.hamburger-menu').on('click', function() {
+    $('#nav-menu').toggleClass('hamburger-active');
+  });
+
+  // Close the menu when the close button (X) is clicked
+  $('.close-button').on('click', function() {
+    $('#nav-menu').removeClass('hamburger-active');
+  });
+});
+
+// $(document).ready(function(){
+//   $(".more-btnn").click(function(){
+//     $(".search-input input").toggleClass('tggl')
+//     $(".chev-up").toggleClass('tggl')
+//   });
+// });
 
 $(document).ready(function(){
 $('.form-button').hover(

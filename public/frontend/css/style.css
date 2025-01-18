@@ -90,7 +90,7 @@ ol,ul{
 hr{
     margin: 0;
     opacity: 1;
-    border: 1px solid #fff;
+    border: 1px solid var(--ftext);;
     width: 100px;
 }
 
@@ -109,6 +109,7 @@ hr{
     font-family: 'MyCustomFont', sans-serif ;
 }
 .main-header{
+    /* position: relative; */
    /* background-color: var(--darkblue); */
    background-color: #fff;
    border-bottom: 1px solid rgb(215, 212, 212);
@@ -117,8 +118,30 @@ hr{
     display: none;
     cursor: pointer;
 }
+.bar-icon{
+    margin-top: 12px;
+}
 .hamburger .fa-bars{
     font-size: 25px;
+}
+.close-button{
+    display: none;
+    font-size: 23px;
+    margin: 20px 12px 20px 0;
+    color: var(--pinkwhite);
+    cursor: pointer;
+}
+.cart-close{
+    font-size: 23px;
+    margin: 20px 12px 20px 0;
+    color: var(--pinkwhite);
+    cursor: pointer;
+    float: right;
+}
+.fa-xmark{
+    background-color: var(--violet);
+    padding: 7px 10px;
+    border-radius: 3px;
 }
 .input-field{
     position: relative;
@@ -143,10 +166,57 @@ hr{
     color: var(--darkblue);
     background-color: transparent;
 }
-/* .account{
-    border: 2px solid white;
+
+.cart-content{
+    position: absolute;
+    top: -30px;
+    right: -350px;
+    height: 100vh;
+    width: 320px;
+    padding: 10px 0 0 30px;
+    background-color: var(--pinkwhite);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    z-index: 500;
+    transition: 0.3s;
 }
-.account:hover{
+.subtotal{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 100px;
+}
+.subtotal p{
+    font-size: 20px;
+}
+.subtotal-count{
+    margin-left: 130px;
+}
+.view-cart{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    width: 200px;
+    padding: 5px 0px;
+    border: 2px solid var(--violet);
+    border-radius: 5px;
+    background-color: var(--violet);
+    transition: 0.3s;
+}
+.view-cart a{
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: var(--pinkwhite);
+}
+.view-cart:hover{
+    background-color: var(--pinkwhite);
+}
+.view-cart:hover .view-cart a{
+    color: var(--violet) !important;
+}
+.cart-toggle{
+    right: 0;
+}
+/* .account:hover{
     border: 2px solid var(--darkblue);
     border-radius: 5px;
 } */

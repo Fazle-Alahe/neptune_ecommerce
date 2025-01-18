@@ -16,6 +16,14 @@
 <body>
     <style>
 
+  
+        :root {
+            --notwhite: #F9F9F9;
+            --pinkwhite: #faf0e6;
+            --darkblue: #0b1b32;
+            --theme: #b4182d;
+            --violet: #54162b;
+        }
         @media (max-width: 992px) {
 
             .main-header .logo img{
@@ -32,6 +40,11 @@
          @media (max-width: 768px) {
             .main-header{
                 padding:15px 0 !important;
+                border-bottom: none;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+            }
+            .hamburger{
+                display: block;
             }
             .main-header .logo{
                 margin-bottom: 5px;
@@ -81,6 +94,46 @@
                 height: 22px;
                 width: 22px;
             }
+            .cart-content{
+                
+    top: -50px;
+            }
+            /* hamburger menu */
+            .bottom-header{
+                /* display: none !important; */
+                box-shadow: none;
+            }
+            .bottom-header ul{
+                position: fixed;
+                top: 0;
+                left: -100%;
+                display: inline !important;
+                background-color: white;
+                width: 50%;
+                padding: 0 0 30px 30px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                transition-duration: 0.5s;
+            }
+            .bottom-header ul .hamburger-active{
+                left: 0;
+            }
+            .bottom-header .main-menu a{
+                border-right: 0;
+            }
+            .bottom-header li{
+                border-top: 1px solid rgb(198, 193, 193);
+                padding: 8px 0 !important;
+            }
+            .main-menu .fa-chevron-down{
+                float: right;
+            }
+            .main-menu:hover .child-menu{
+                display: none;
+            }
+            .close-button{
+                display: flex;
+                justify-content: right;
+            }
          }
 
          /* @media (min-width: 576px) { 
@@ -115,12 +168,14 @@
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-8 logo">
                             <div class="row">
-                                <div class="col-4 hamburger d-flex align-items-center">
-                                    <i class="fa-solid fa-bars ms-2"></i>
+                                <div class="col-4 hamburger">
+                                    <div class="bar-icon">
+                                        <i class="fa-solid fa-bars ms-2"></i>
+                                    </div>
                                 </div>
                                 <div class="col-8">
                                     <a href="#" class="">
-                                        <img src="{{asset('uploads/logo.svg')}}" alt="">
+                                        <img width="180" src="{{asset('uploads/logo.png')}}" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -140,11 +195,11 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-2 d-flex align-items-center justify-content-end">
+                        <div class="col-lg-4 col-md-4 col-sm-2 d-flex align-items-center justify-content-end right-navigation">
                             <div class="account me-5">
                                 <a title="login" href="#"><span>Login</span><i class="fa-regular fa-user ms-2"></i></a>
                             </div>
-                            <div class="account">
+                            <div class="account d-flex">
                                 <a href="#" title="Cart">
                                     <div class="cart">
                                         <span>Cart</span> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart3 mb-1" viewBox="0 0 16 16">
@@ -153,6 +208,17 @@
                                         <span class="cart-count d-flex align-items-center justify-content-center">0</span>
                                     </div>
                                 </a>
+                                <div class="cart-content">
+                                    <div class="cart-close aaa text-right">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                    <div class="subtotal d-flex">
+                                        <p>Subtotal:<span class="subtotal-count">&#2547; 999990</span></p>
+                                    </div>
+                                    <div class="view-cart text-center">
+                                        <a href="#">View Cart</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -162,7 +228,11 @@
             {{-- bottom header --}}
             <section class="bottom-header container-fluid py-2">
                 <div class="container d-flex justify-content-center">
-                    <ul class="d-flex">
+                    
+                    <ul class="d-flex" id="nav-menu">
+                        <div class="close-button text-right">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
                         <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
                             <div class="child-menu">
                                 <ul>

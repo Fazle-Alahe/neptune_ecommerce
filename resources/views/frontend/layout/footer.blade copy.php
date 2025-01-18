@@ -9,6 +9,9 @@
         --ftext: #cdc8c8;
         }
 
+    .fot-col{
+        width: 24%;
+    }
     .footer-section{
         background-color: var(--darkblue);
     }
@@ -59,11 +62,11 @@
     }
 
 
-    /* @media (max-width: 768px) {
+    @media (max-width: 768px) {
         .footer-bottom p{
-            font-size: 1px;
+            font-size: 14px;
         }
-    } */
+    }
 </style>
 
 
@@ -72,8 +75,8 @@
 {{-- footer section --}}
 <section class="footer-section container-fluid">
     <div class="container footer-top py-5">
-        <div class="row gx-3">
-            <div class="col-lg-3 footer-logo">
+        <div class="row">
+            <div class="fot-col footer-logo">
                 <a href="#" class="">
                     <img class="mb-3" width="180" src="{{asset('uploads/logo.png')}}" alt="">
                 </a>
@@ -81,7 +84,7 @@
                  offering a seamless e-commerce experience with a wide range of high-quality products.
                  Neptune provides customers with a curated selection of top-notch items at competitive prices.</p>
             </div>
-            <div class="col-lg-3 mt-2">
+            <div class="fot-col mt-2">
                 <h4 class="">Contact Us</h4>
                 <hr class="footer_hr">
                 <div class="contact pt-2">
@@ -90,7 +93,7 @@
                     <p class="mt-2"><i class="fa-solid fa-location-dot me-3"></i>+583 Shamim Sarani, Mirpur, Dhaka, Bangladesh</p>
                 </div>
             </div>
-            <div class="col-lg-3 mt-2">
+            <div class="fot-col mt-2">
                 <h4 class="">Customers Account</h4>
                 <hr class="footer_hr">
                 <div class="contact pt-2">
@@ -101,7 +104,7 @@
                     <p class="mt-2"><a href="#">User Dashboard</a></p>
                 </div>
             </div>
-            <div class="col-lg-3 mt-2">
+            <div class="fot-col mt-2">
                 <h4 class="">Related Page</h4>
                 <hr class="footer_hr">
                 <div class="contact pt-2">
