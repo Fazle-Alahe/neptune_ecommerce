@@ -1,49 +1,63 @@
 // cart
 
 $(document).ready(function(){
-
-  $(".count").on("click", function (e) {
-    // $(".cart-content").toggleClass("cart-toggle");
-    //   e.stopPropagation();
-    alert();
-  });
-
-  $(".cart-close").on("click", function (e) {
-      cartContent.removeClass("cart-toggle");
-      e.stopPropagation();
-  });
-
-  // body.on("click", function () {
-  //     cartContent.removeClass("mini-cart-content-toggle");
-  // }).find(cartContent).on("click", function (e) {
-  //     e.stopPropagation();
-  // });
-
-});
-
-
-$(document).ready(function(){
-  $(".cart").click(function(){
+  $(".cart").click(function(e){
+    e.stopPropagation();
     $(".cart-content").addClass("cart-toggle");
-    // alert();
   });
 
-  $(".fa-xmark").click(function(){
+  $(".cart-close").click(function(e){
+    e.stopPropagation();
     $(".cart-content").removeClass("cart-toggle");
-    // alert();
   });
+
+  $('body').click(function() {
+    $(".cart-content").removeClass("cart-toggle");
+  });
+
+  $(".cart-content").click(function(e) {
+    e.stopPropagation();
+  });
+
 });
 
+
+// hamburger
 $(document).ready(function(){
-  $('.hamburger-menu').on('click', function() {
-    $('#nav-menu').toggleClass('hamburger-active');
+  $(".fa-bars").click(function(e){
+    e.stopPropagation();
+    $(".hamburger-menu").addClass("hamburger-active");
   });
 
-  // Close the menu when the close button (X) is clicked
-  $('.close-button').on('click', function() {
-    $('#nav-menu').removeClass('hamburger-active');
+  $(".hamburger-close").click(function(e){
+    e.stopPropagation();
+    $(".hamburger-menu").removeClass("hamburger-active");
   });
+
+  $('body').click(function() {
+    $(".hamburger-menu").removeClass("hamburger-active");
+  });
+
+  $(".hamburger-menu").click(function(e) {
+    e.stopPropagation();
+  });
+
 });
+
+
+
+// view cart font
+// $(document).ready(function() {
+//   // When hovering over the parent element
+//   $(".parent").hover(
+//     function() {
+//       $(this).find(".child").css("color", "red");  // Children font color
+//     },
+//     function() {
+//       $(this).find(".child").css("color", "");  // Reset children font color
+//     }
+//   );
+// });
 
 // $(document).ready(function(){
 //   $(".more-btnn").click(function(){

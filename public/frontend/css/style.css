@@ -97,6 +97,7 @@ hr{
 .sticky-header{
    position: sticky;
    top: 0;
+   z-index: 100;
 }
 /* top header */
 .top-header{
@@ -210,7 +211,7 @@ hr{
 .view-cart:hover{
     background-color: var(--pinkwhite);
 }
-.view-cart:hover .view-cart a{
+.view-cart:hover .view-text{
     color: var(--violet) !important;
 }
 .cart-toggle{
@@ -251,12 +252,18 @@ hr{
     font-weight: 500;
     color: var(--darkblue);
 }
+.hamburger-menu{
+    display: none;
+}
+/* .bottom-header .navigation-menu{
+    display: flex;
+} */
 .main-menu{
     position: relative;
 }
 .child-menu{
     position: absolute;
-    top: 36px;
+    top: 34px;
     display: none;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: 0.3s;

@@ -95,34 +95,38 @@
                 width: 22px;
             }
             .cart-content{
-                
-    top: -50px;
+                top: -50px;
             }
             /* hamburger menu */
             .bottom-header{
-                /* display: none !important; */
+                display: none !important;
                 box-shadow: none;
             }
-            .bottom-header ul{
+            .hamburger-menu{
                 position: fixed;
                 top: 0;
-                left: -100%;
-                display: inline !important;
+                left: -50%;
+                display: block;
+                width: 300px;
+                height: 100vh;
                 background-color: white;
-                width: 50%;
                 padding: 0 0 30px 30px;
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                transition-duration: 0.5s;
+                transition-duration: 0.5s; 
             }
-            .bottom-header ul .hamburger-active{
+            .hamburger-menu li a:hover{
+                color: var(--theme)
+            }
+            
+            .hamburger-menu li{
+                border-top: 1px solid rgb(198, 193, 193);
+                padding: 8px 0 !important;
+            }
+            .hamburger-active{
                 left: 0;
             }
             .bottom-header .main-menu a{
                 border-right: 0;
-            }
-            .bottom-header li{
-                border-top: 1px solid rgb(198, 193, 193);
-                padding: 8px 0 !important;
             }
             .main-menu .fa-chevron-down{
                 float: right;
@@ -210,13 +214,13 @@
                                 </a>
                                 <div class="cart-content">
                                     <div class="cart-close aaa text-right">
-                                        <i class="fa-solid fa-xmark"></i>
+                                        <i class="fa-solid fa-xmark cart-close"></i>
                                     </div>
                                     <div class="subtotal d-flex">
                                         <p>Subtotal:<span class="subtotal-count">&#2547; 999990</span></p>
                                     </div>
                                     <div class="view-cart text-center">
-                                        <a href="#">View Cart</a>
+                                        <a href="#" class="view-text">View Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -225,13 +229,54 @@
                 </div>
             </section>
             
+            {{-- hamburger menu --}}
+            <div class="hamburger-menu">
+                <ul class="">
+                    <div class="close-button text-right">
+                        <i class="fa-solid fa-xmark hamburger-close"></i>
+                    </div>
+                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
+                        <div class="child-menu">
+                            <ul>
+                                <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
+                                <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
+                                <li class="py-2 px-3"><a href="#" class="">Fasfvdfbdbdghion</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
+                        <div class="child-menu">
+                            <ul>
+                                <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
+                                <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
+                                <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
+                                <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
+                        <div class="child-menu">
+                            <ul>
+                                <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
+                                <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
+                                <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
+                                <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion</a></li>
+                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion</a></li>
+                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion</a></li>
+                </ul>
+            </div>
+
             {{-- bottom header --}}
             <section class="bottom-header container-fluid py-2">
                 <div class="container d-flex justify-content-center">
                     
-                    <ul class="d-flex" id="nav-menu">
+                    <ul class="d-flex nav-menu">
                         <div class="close-button text-right">
-                            <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-solid fa-xmark hamburger-close"></i>
                         </div>
                         <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
                             <div class="child-menu">
