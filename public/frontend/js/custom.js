@@ -45,6 +45,18 @@ $(document).ready(function(){
 });
 
 
+$(document).ready(function(){
+  $('.banner').slick({
+    // dots: true,
+    infinite: true,
+    autoplay: true,
+    slidesToScroll: 1,
+    speed: 1000,
+    autoplaySpeed: 3000,
+    fade: true,
+    cssEase: 'linear'
+    });
+});
 
 // view cart font
 // $(document).ready(function() {
@@ -77,6 +89,14 @@ $('.form-button').hover(
 );
 });
 
+$(document).ready(function(){
+  $('.autoplay').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
+});
 
 $('.jubba-autoplay').slick({
   prevArrow: '.jubba-prev',

@@ -2,7 +2,8 @@
 
 @section('content')
 
-@include('frontend.homepage.banner')
+@include('frontend.homepage.banner1')
+@include('frontend.homepage.banner2')
 @include('frontend.homepage.recent_products')
 @include('frontend.homepage.category_1')
 @include('frontend.homepage.category_2')

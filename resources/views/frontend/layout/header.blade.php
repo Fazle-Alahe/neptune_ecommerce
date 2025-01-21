@@ -8,7 +8,10 @@
     <title>Neptune</title>
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/slick/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/slick/slick-theme.css')}}">
 
+    @stack('banner2')
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
     {{-- <link rel="stylesheet" href="{{asset('frontend/css/md.css')}}" media="(max-width: 992px)"> --}}
 </head>
@@ -24,6 +27,8 @@
             --theme: #b4182d;
             --violet: #54162b;
         }
+
+
         @media (max-width: 992px) {
 
             .main-header .logo img{
@@ -94,9 +99,6 @@
                 height: 22px;
                 width: 22px;
             }
-            .cart-content{
-                top: -50px;
-            }
             /* hamburger menu */
             .bottom-header{
                 display: none !important;
@@ -105,7 +107,7 @@
             .hamburger-menu{
                 position: fixed;
                 top: 0;
-                left: -50%;
+                left: -80%;
                 display: block;
                 width: 300px;
                 height: 100vh;
@@ -212,17 +214,17 @@
                                         <span class="cart-count d-flex align-items-center justify-content-center">0</span>
                                     </div>
                                 </a>
-                                <div class="cart-content">
-                                    <div class="cart-close aaa text-right">
-                                        <i class="fa-solid fa-xmark cart-close"></i>
-                                    </div>
-                                    <div class="subtotal d-flex">
-                                        <p>Subtotal:<span class="subtotal-count">&#2547; 999990</span></p>
-                                    </div>
-                                    <div class="view-cart text-center">
-                                        <a href="#" class="view-text">View Cart</a>
-                                    </div>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-content">
+                            <div class="cart-close aaa text-right">
+                                <i class="fa-solid fa-xmark cart-close"></i>
+                            </div>
+                            <div class="subtotal d-flex">
+                                <p>Subtotal:<span class="subtotal-count">&#2547; 999990</span></p>
+                            </div>
+                            <div class="view-cart text-center">
+                                <a href="#" class="view-text">View Cart</a>
                             </div>
                         </div>
                     </div>
@@ -318,4 +320,5 @@
         <div class="containerr">
   
         </div>
+        
     {{-- </div> --}}
