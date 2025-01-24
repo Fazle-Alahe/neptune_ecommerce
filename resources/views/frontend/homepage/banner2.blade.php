@@ -10,7 +10,6 @@
     }
     .banner2-section .slider img{
         width: 100%;
-        height: 65vh;
         border-radius: 10px;
     }
     /* .side-bar{
