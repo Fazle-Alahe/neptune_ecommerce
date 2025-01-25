@@ -24,12 +24,12 @@ $(document).ready(function(){
 
 // hamburger
 $(document).ready(function(){
-  $(".fa-bars").click(function(e){
+  $(".hamburger").click(function(e){
     e.stopPropagation();
     $(".hamburger-menu").addClass("hamburger-active");
   });
 
-  $(".hamburger-close").click(function(e){
+  $(".close-button").click(function(e){
     e.stopPropagation();
     $(".hamburger-menu").removeClass("hamburger-active");
   });

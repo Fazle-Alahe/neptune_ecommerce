@@ -176,8 +176,8 @@
                         <div class="col-lg-2 col-md-2 col-sm-8 logo">
                             <div class="row">
                                 <div class="col-4 hamburger">
-                                    <div class="bar-icon">
-                                        <i class="fa-solid fa-bars ms-2"></i>
+                                    <div class="bar-con">
+                                        <i class="fa-solid fa-bars bar-icon ms-2"></i>
                                     </div>
                                 </div>
                                 <div class="col-8">
