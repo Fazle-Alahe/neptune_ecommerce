@@ -1,23 +1,18 @@
 <style>
     .slider img{
         width: 100%;
-        height: 85vh;
     }
 
     
     @media (max-width: 768px) { 
-            
         .slider img{
         width: 100%;
-        height: 70vh;
         }
     }
 
     @media (max-width: 576px) { 
-            
         .slider img{
         width: 100%;
-        height: 50vh;
         }
     }
 </style>
