@@ -1,9 +1,13 @@
 @push('banner2')
     
 <style>
+    .banner2-section .container{
+        background-color: #F3F4F6;
+        padding: 0 !important;
+        border-radius: 10px;
+    }
     .main-header{
-        border-bottom: none;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        border-bottom: none; 
     }
     .bottom-header{
         display: none !important;
@@ -13,17 +17,47 @@
         height: 65vh;
         border-radius: 10px;
     }
-    /* .side-bar{
-        paddt
-    } */
+    .side-bar{
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .side-bar li{
+        cursor: pointer;
+        border-bottom: 1px solid rgb(225, 222, 222);
+        border-radius: 10px;
+        font-size: 17px;
+        font-weight: 500;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .side-bar li:hover{
+        background-color: #E5E7EB;
+    }
     .side-bar li a:hover{
-        color: var(--theme);
+        color: var(--darkblue);
     }
-    .side-bar .child-menu{
+    .child-category{
+        position: static !important;
+        margin-top: 5px;
         display: none !important;
+        overflow: hidden;
+        height: 0;
+        transition: height 0.5s ease-out;
     }
-    .main-menu .fa-chevron-down{
+    .child-category li{
+        cursor: pointer;
+    }
+    .child-category li:hover{
+        background-color: #F3F4F6;
+    }
+    .toggle{
+        display: block !important;
+        height: auto;
+    }
+    .category .fa-chevron-down{
         float: right;
+        font-size: 13px;
+        margin-top: 3px;
     }
 </style>
 
@@ -31,13 +65,13 @@
 
 
 {{-- banner 2 --}}
-<section class="banner2-section">
+<section class="banner2-section py-2">
     <div class="container">
         <div class="row">
-            <div class="col-3 side-bar pt-4">
+            <div class="col-3 side-bar">
                 <ul class="">
-                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
-                        <div class="child-menu">
+                    <li class="me-2 py-2 category"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
+                        <div class="child-category">
                             <ul>
                                 <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
                                 <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
@@ -45,8 +79,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
-                        <div class="child-menu">
+                    <li class="me-2 py-2 category"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
+                        <div class="child-category">
                             <ul>
                                 <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
                                 <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
@@ -55,8 +89,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
-                        <div class="child-menu">
+                    <li class="me-2 py-2 category"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
+                        <div class="child-category">
                             <ul>
                                 <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
                                 <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
@@ -65,9 +99,9 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion</a></li>
-                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion</a></li>
-                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion</a></li>
+                    <li class="me-2 py-2 category"><a href="#" class="pe-4">Fashion</a></li>
+                    <li class="me-2 py-2 category"><a href="#" class="pe-4">Fashion</a></li>
+                    <li class="me-2 py-2 category"><a href="#" class="pe-4">Fashion</a></li>
                 </ul>
             </div>
             <div class="col-9">

@@ -46,7 +46,7 @@
             .main-header{
                 padding:15px 0 !important;
                 border-bottom: none;
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;   
             }
             .hamburger{
                 display: block;
@@ -125,6 +125,7 @@
                 padding: 8px 0 !important;
             }
             .hamburger-active{
+                display: block;
                 left: 0;
             }
             .bottom-header .main-menu a{
@@ -221,7 +222,7 @@
                                 <i class="fa-solid fa-xmark cart-close"></i>
                             </div>
                             <div class="subtotal d-flex">
-                                <p>Subtotal:<span class="subtotal-count">&#2547; 999990</span></p>
+                                <p>Subtotal:<span class="subtotal-count">&#2547; 99990</span></p>
                             </div>
                             <div class="view-cart text-center">
                                 <a href="#" class="view-text">View Cart</a>

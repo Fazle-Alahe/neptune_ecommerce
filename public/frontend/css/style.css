@@ -97,7 +97,7 @@ hr{
 
 .sticky-header{
    position: sticky;
-   top: 0;
+   top: -1px;
    z-index: 100;
 }
 /* top header */

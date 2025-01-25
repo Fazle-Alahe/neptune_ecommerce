@@ -44,7 +44,7 @@ $(document).ready(function(){
 
 });
 
-
+// banner slick
 $(document).ready(function(){
   $('.banner').slick({
     // dots: true,
@@ -57,6 +57,29 @@ $(document).ready(function(){
     cssEase: 'linear'
     });
 });
+
+// form-button
+$(document).ready(function(){
+  $(".form-button").click(function(e){
+    e.stopPropagation();
+    if($(".input-form, .arrow").hasClass("block")){
+      $(".input-form, .arrow").removeClass("block");
+    }
+    else{
+      $(".input-form, .arrow").addClass("block");
+    }
+  });
+
+  $('body').click(function() {
+    $(".input-form, .arrow").removeClass("block");
+  });
+
+  $(".input-form, .arrow").click(function(e) {
+    e.stopPropagation();
+  });
+
+});
+
 
 // view cart font
 // $(document).ready(function() {
@@ -78,63 +101,18 @@ $(document).ready(function(){
 //   });
 // });
 
-$(document).ready(function(){
-$('.form-button').hover(
-  function() {
-      $('.input-form, .arrow').addClass('block');
-  },
-  function() {
-      $('.input-form, .arrow').removeClass('block');
-  }
-);
-});
 
-$(document).ready(function(){
-  $('.autoplay').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  });
-});
 
-$('.jubba-autoplay').slick({
-  prevArrow: '.jubba-prev',
-  nextArrow: '.jubba-next',
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  autoplay: true,
-  infinite: false,
-  autoplaySpeed: 2000,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 576,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
+// mobile submenu
+$(function() {
+  $(".fa-chevron-down").click(function() {
+    var $childMenu = $(this).closest('.category').find('.child-category');
+
+    if (!$childMenu.hasClass("toggle")) {
+      $('.child-category').removeClass('toggle').slideUp(); 
+      $childMenu.addClass('toggle').slideDown();
+    } else {
+      $childMenu.removeClass('toggle').slideUp(); 
     }
-  ]
+  });
 });
