@@ -17,6 +17,7 @@
         border-radius: 10px;
     }
     .side-bar{
+        width: 25%;
         border-radius: 10px;
         padding: 20px;
     }
@@ -35,6 +36,9 @@
     .side-bar li a:hover{
         color: var(--darkblue);
     }
+    .right-slider{
+        width: 75%;
+    }
     .child-category{
         position: static !important;
         margin-top: 5px;
@@ -49,6 +53,9 @@
     .child-category li:hover{
         background-color: #F3F4F6;
     }
+    .child-category li a{
+        font-size: 15px;
+    }
     .toggle{
         display: block !important;
         height: auto;
@@ -57,6 +64,10 @@
         float: right;
         font-size: 13px;
         margin-top: 3px;
+    }
+
+    @media (max-width: 768px) {
+        
     }
 </style>
 
@@ -67,7 +78,7 @@
 <section class="banner2-section py-2">
     <div class="container">
         <div class="row">
-            <div class="col-3 side-bar">
+            <div class="side-bar">
                 <ul class="">
                     <li class="me-2 py-2 category"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
                         <div class="child-category">
@@ -103,7 +114,7 @@
                     <li class="me-2 py-2 category"><a href="#" class="pe-4">Fashion</a></li>
                 </ul>
             </div>
-            <div class="col-9">
+            <div class="right-slider">
                 <div class="card">
                     <div class="banner">
                         <div class="slider">

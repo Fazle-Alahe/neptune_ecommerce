@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-3">
                 <div class="card">
-    
+                    
                 </div>
             </div>
         </div>

@@ -101,6 +101,12 @@ hr{
    z-index: 100;
 }
 /* top header */
+
+.toggle{
+    display: block !important;
+    height: auto;
+}
+
 .top-header{
     background-color: var(--pinkwhite);
     /* background-color: #F9F9F9; */
@@ -264,6 +270,7 @@ hr{
 .child-menu{
     position: absolute;
     top: 34px;
+    border-radius: 5px;;
     display: none;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: 0.3s;

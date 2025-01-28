@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Neptune</title>
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/slick/slick.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/slick/slick-theme.css')}}">
 
@@ -137,6 +136,17 @@
             .main-menu:hover .child-menu{
                 display: none;
             }
+            .child-menu{
+                position: static !important;
+                margin-top: 5px;
+                display: none;
+                overflow: hidden;
+                transition: height 0.5s ease-out;
+            }
+            .child-menu li{
+                border-bottom: 0 !important;
+                padding: 10px 15px !important;
+            }
             .close-button{
                 display: flex;
                 justify-content: right;
@@ -238,7 +248,7 @@
                     <div class="close-button text-right">
                         <i class="fa-solid fa-xmark hamburger-close"></i>
                     </div>
-                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
+                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down hamburger-chevron ms-1"></i></a>
                         <div class="child-menu">
                             <ul>
                                 <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
@@ -247,7 +257,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
+                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down hamburger-chevron ms-1"></i></a>
                         <div class="child-menu">
                             <ul>
                                 <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
@@ -257,7 +267,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
+                    <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down hamburger-chevron ms-1"></i></a>
                         <div class="child-menu">
                             <ul>
                                 <li class="py-2 px-3"><a href="#" class="">Fashion</a></li>
