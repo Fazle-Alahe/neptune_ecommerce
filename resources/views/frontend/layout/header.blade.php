@@ -74,7 +74,7 @@
             .arrow{
                 position: absolute;
                 content: "";
-                left: -7px;
+                left: 22px;
                 top: 21px;
                 border: 12px solid transparent;
                 border-bottom: 12px solid #54162b;
@@ -82,7 +82,7 @@
             }
             .form-button{
                 font-size: 22px;
-                margin-right: 30px;
+                /* margin-right: 30px; */
             }
             .form-button button{
                 margin-top: -2px !important;
@@ -153,13 +153,35 @@
             }
          }
 
-         /* @media (min-width: 576px) { 
+         @media (max-width: 576px) { 
             
             .top-header p{
                 font-size: 13px;
-            } */
+            }
+            .search-bar .input-form{
+                left: 0;
+            }
+            .arrow{
+                left: 72px;
+            }
+         }
 
-         /* } */
+         @media (max-width: 530px) { 
+            .arrow{
+                left: 60px;
+            }
+            .search-bar .input-form{
+                width: 200px;
+            }
+         }
+         @media (max-width: 450px) { 
+            .arrow{
+                left: 40px;
+            }
+            .search-bar .input-form{
+                left: -20px;
+            }
+         }
 
     </style>
 
@@ -183,7 +205,7 @@
             <section class="main-header container-fluid py-3">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-2 col-md-2 col-sm-8 logo">
+                        <div class="col-lg-2 col-md-2 col-sm-8 col-6 logo">
                             <div class="row">
                                 <div class="col-4 hamburger">
                                     <div class="bar-con">
@@ -197,7 +219,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-2 text-end">
+                        <div class="col-lg-6 col-md-6 col-sm-2 col-3 text-end">
                             <div class="search-bar">
                                 <form action="">
                                     <div class="input-field">
@@ -212,7 +234,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-2 d-flex align-items-center justify-content-end right-navigation">
+                        <div class="col-lg-4 col-md-4 col-sm-2 col-3 d-flex align-items-center justify-content-end right-navigation">
                             <div class="account me-5">
                                 <a title="login" href="#"><span>Login</span><i class="fa-regular fa-user ms-2"></i></a>
                             </div>

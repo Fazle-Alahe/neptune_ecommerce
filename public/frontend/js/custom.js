@@ -21,7 +21,6 @@ $(document).ready(function(){
 
 });
 
-
 // hamburger
 $(document).ready(function(){
   $(".bar-icon").click(function(e){
@@ -79,29 +78,6 @@ $(document).ready(function(){
   });
 
 });
-
-
-// view cart font
-// $(document).ready(function() {
-//   // When hovering over the parent element
-//   $(".parent").hover(
-//     function() {
-//       $(this).find(".child").css("color", "red");  // Children font color
-//     },
-//     function() {
-//       $(this).find(".child").css("color", "");  // Reset children font color
-//     }
-//   );
-// });
-
-// $(document).ready(function(){
-//   $(".more-btnn").click(function(){
-//     $(".search-input input").toggleClass('tggl')
-//     $(".chev-up").toggleClass('tggl')
-//   });
-// });
-
-
 
 // banner2 sidebar
 $(document).ready(function() {
