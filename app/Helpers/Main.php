@@ -10,7 +10,7 @@ class Main
         $html .= ' <div class="product">';
         $html .= '  <div class="product-image">';
         // $html .= '      <a href="#"><img src="{{ asset("uploads/banner/banner5.jpeg") }}" alt=""></a>';
-        $html .= '      <a href="#"><img src="{{ asset($img_src) }}" alt=""></a>';
+        $html .= '      <a href="#"><img src=" '.asset($img_src).' " alt=""></a>';
         $html .= '      <div class="discount-badge text-center">';
         $html .= '          <span>-17%</span>';
         $html .= '      </div>';

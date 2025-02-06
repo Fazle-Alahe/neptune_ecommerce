@@ -415,3 +415,21 @@ hr{
     background-color: var(--notwhite);
     color: var(--darkblue);
 }
+
+
+/* login */
+.login-image{
+    background-color: #FEE4BF;
+    height: 500px;
+    border-radius: 8px 0 0 8px;
+}
+.reg_link p{
+    width: 140px;
+    padding: 7px 5px;
+    background-color: var(--darkblue);
+    color: var(--pinkwhite);
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid var(--darkblue);
+    border-radius: 3px;
+}
