@@ -286,38 +286,56 @@
                             </div>
                             <div class="col-12">
                                 {{-- cart items --}}
-                                <div class="cart-items">
+                                <div class="cart-items mb-3">
                                     <div class="single-cart d-inline-flex">
                                         <div class="cart-image mx-3">
                                             <img src="{{ asset('uploads/banner/banner1.jpeg') }}" alt="">
                                         </div>
                                         <div class="cart-details me-2">
-                                            <p>Stylish pink coatc oatcoat</p>
+                                            <a href="#"><p title="Stylish pink coatcvsdfvgsdgfv">Women T-shirt...</p></a>
+                                            <div class="item-quantity d-flex mt-2">  
+                                                <button class="decrease px-2">-</button>  
+                                                    <input type="number" value="1" class="quantity text-center mx-2" min="1">  
+                                                <button class="increase px-2">+</button>  
+                                            </div> 
                                         </div>
-                                        <div class="cart-price mx-2">
-                                            <p>&#2547;30000</p>
+                                        <div class="cart-price mx-2 text-center">
+                                            <i class="fa-solid fa-trash trash"></i>
+                                            <p class="pt-2">&#2547;12000</p>
                                         </div>
                                     </div>
                                     <div class="single-cart d-inline-flex">
                                         <div class="cart-image mx-3">
-                                            <img src="{{ asset('uploads/banner/banner1.jpeg') }}" alt="">
+                                            <img src="{{ asset('uploads/banner/banner3.jpeg') }}" alt="">
                                         </div>
                                         <div class="cart-details me-2">
-                                            <p>Stylish pink coatc oatcoat</p>
+                                            <a href="#"><p title="Stylish pink coatcvsdfvgsdgfv">GUCCI HORSEBIT CHAINc...</p></a>
+                                            <div class="item-quantity d-flex mt-2">  
+                                                <button class="decrease px-2">-</button>  
+                                                    <input type="number" value="1" class="quantity text-center mx-2" min="1">  
+                                                <button class="increase px-2">+</button>  
+                                            </div> 
                                         </div>
-                                        <div class="cart-price mx-2">
-                                            <p>&#2547;30000</p>
+                                        <div class="cart-price mx-2 text-center">
+                                            <i class="fa-solid fa-trash trash"></i>
+                                            <p class="pt-2">&#2547;21000</p>
                                         </div>
                                     </div>
                                     <div class="single-cart d-inline-flex">
                                         <div class="cart-image mx-3">
-                                            <img src="{{ asset('uploads/banner/banner1.jpeg') }}" alt="">
+                                            <img src="{{ asset('uploads/banner/banner2.jpeg') }}" alt="">
                                         </div>
                                         <div class="cart-details me-2">
-                                            <p>Stylish pink</p>
+                                            <a href="#"><p title="Stylish pink coatcvsdfvgsdgfv">Stylish pink coatc...</p></a>
+                                            <div class="item-quantity d-flex mt-2">  
+                                                <button class="decrease px-2">-</button>  
+                                                    <input type="number" value="1" class="quantity text-center mx-2" min="1">  
+                                                <button class="increase px-2">+</button>  
+                                            </div> 
                                         </div>
-                                        <div class="cart-price mx-2">
-                                            <p>&#2547;30000</p>
+                                        <div class="cart-price mx-2 text-center">
+                                            <i class="fa-solid fa-trash trash"></i>
+                                            <p class="pt-2">&#2547;30000</p>
                                         </div>
                                     </div>
                                 </div>

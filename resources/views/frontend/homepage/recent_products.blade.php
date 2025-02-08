@@ -3,14 +3,14 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row gy-4">
-            <div class="col-lg-3">
+            <div class="col-6 col-lg-3 col-md-4">
                 <div class="product">
                     <div class="product-image">
                         <a href="#"><img src="{{ asset('uploads/banner/banner1.jpeg') }}" alt=""></a>
                         <div class="discount-badge text-center">
                             <span>-17%</span>
                         </div>
-                        <div class="category-badge text-center">
+                        <div class="category-badge text-center pb-1">
                             <a href="#"><span>Category</span></a>
                         </div>
                     </div>
@@ -21,16 +21,16 @@
                         <p><s class="discount-price me-2">&#2547;40000</s></p><p>&nbsp; &#2547;35000</p>
                     </div>
                     <div class="product-widget mb-3">
-                        <div class="row justify-content-center">
-                            <div class="col-6 buy-now text-center">
+                        <div class="row px-2">
+                            <div class="col-8 buy-now text-center">
                                 <a href="#" class="">Buy Now</a>
                             </div>
-                            <div class="col-2 text-center product_cart me-1">
+                            <div class="col-3 text-center product_cart">
                                 <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                             </div>
-                            <div class="col-2 text-center product_cart">
+                            {{-- <div class="col-3 text-center product_cart">
                                 <a href="#"><i class="fa-solid fa-heart"></i></a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
