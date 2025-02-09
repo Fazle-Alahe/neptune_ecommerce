@@ -294,9 +294,9 @@
                                         <div class="cart-details me-2">
                                             <a href="#"><p title="Stylish pink coatcvsdfvgsdgfv">Women T-shirt...</p></a>
                                             <div class="item-quantity d-flex mt-2">  
-                                                <button class="decrease px-2">-</button>  
+                                                <button class="decrease px-2 d-flex align-items-center">-</button>  
                                                     <input type="number" value="1" class="quantity text-center mx-2" min="1">  
-                                                <button class="increase px-2">+</button>  
+                                                <button class="increase px-2 d-flex align-items-center">+</button>  
                                             </div> 
                                         </div>
                                         <div class="cart-price mx-2 text-center">
@@ -311,9 +311,9 @@
                                         <div class="cart-details me-2">
                                             <a href="#"><p title="Stylish pink coatcvsdfvgsdgfv">GUCCI HORSEBIT CHAINc...</p></a>
                                             <div class="item-quantity d-flex mt-2">  
-                                                <button class="decrease px-2">-</button>  
+                                                <button class="decrease px-2 d-flex align-items-center">-</button>  
                                                     <input type="number" value="1" class="quantity text-center mx-2" min="1">  
-                                                <button class="increase px-2">+</button>  
+                                                <button class="increase px-2 d-flex align-items-center">+</button>  
                                             </div> 
                                         </div>
                                         <div class="cart-price mx-2 text-center">
@@ -328,9 +328,9 @@
                                         <div class="cart-details me-2">
                                             <a href="#"><p title="Stylish pink coatcvsdfvgsdgfv">Stylish pink coatc...</p></a>
                                             <div class="item-quantity d-flex mt-2">  
-                                                <button class="decrease px-2">-</button>  
+                                                <button class="decrease px-2 d-flex align-items-center">-</button>  
                                                     <input type="number" value="1" class="quantity text-center mx-2" min="1">  
-                                                <button class="increase px-2">+</button>  
+                                                <button class="increase px-2 d-flex align-items-center">+</button>  
                                             </div> 
                                         </div>
                                         <div class="cart-price mx-2 text-center">

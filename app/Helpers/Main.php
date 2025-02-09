@@ -4,7 +4,7 @@ namespace App\Helpers;
 
 class Main
 {
-    public static function product($img_src)
+    public static function product($img_src, $discount = null, $category = null, $product_name, $price, $after_discount = null)
     {
         $html = '<div class="col-lg-3 col-md-4 col-6">';
         $html .= ' <div class="product">';
@@ -12,17 +12,17 @@ class Main
         // $html .= '      <a href="#"><img src="{{ asset("uploads/banner/banner5.jpeg") }}" alt=""></a>';
         $html .= '      <a href="#"><img src=" '.asset($img_src).' " alt=""></a>';
         $html .= '      <div class="discount-badge text-center">';
-        $html .= '          <span>-17%</span>';
+        $html .= '          <span>'.$discount.'</span>';
         $html .= '      </div>';
-        $html .= '      <div class="category-badge text-center">';
-        $html .= '          <a href="#"><span>Category</span></a>';
+        $html .= '      <div class="category-badge text-center ">';
+        $html .= '          <a href="#"><span>'.$category.'</span></a>';
         $html .= '      </div>';
         $html .= '  </div>';
         $html .= ' <div class="product-title px-3 mt-3">';
-        $html .= '      <a href="#"><p>WFE-2H2-GDXX-XX</p></a>';
+        $html .= '      <a href="#"><p>'.$product_name.'</p></a>';
         $html .= ' </div>';
         $html .= ' <div class="price d-flex px-3 mb-1"> ';
-        $html .= '      <p><s class="discount-price me-2">&#2547;40000</s></p><p>&nbsp; &#2547;35000</p> ';
+        $html .= '      <p><s class="discount-price me-2">&#2547;'.$price.'</s></p><p>&nbsp; &#2547;'.$after_discount.'</p> ';
         $html .= ' </div> ';
         $html .= ' <div class="product-widget mb-3"> ';
         $html .= '      <div class="row px-2 align-items-center justify-content-center"> ';
