@@ -109,3 +109,89 @@ $(document).ready(function() {
     }
   });
 });
+
+
+// cart update
+
+$(document).ready(function(){
+
+// calculate total
+function updateTotals(){
+  let subtotal = 0;
+  $('.single-cart').each(function (){
+    let productQuantity = parseInt($(this).find('.quantity').val());
+    let productPrice = $(this).find('span').text();
+    subtotal += productQuantity * productPrice; 
+  });
+
+  $('.subtotal-m').text(subtotal);
+}
+
+// increase quantity
+  $('.increase').click(function(){
+    let inputQuantity = $(this).siblings('.quantity');
+    inputQuantity.val(parseInt(inputQuantity.val()) + 1 );
+    updateTotals();
+  });
+
+// decrease quantity
+  $('.decrease').click(function(){
+    let inputQuantity = $(this).siblings('.quantity');
+    if(inputQuantity.val() > 1){
+      inputQuantity.val(parseInt(inputQuantity.val()) - 1 );
+    }
+    updateTotals();
+  });
+
+//cart item remove
+  $('.trash').click(function(){
+     $(this).closest('.single-cart').remove();
+     updateTotals();
+  });
+
+  updateTotals();
+});
+
+
+// shop slick
+$('.all-shop').slick({
+  dots: true,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  speed: 300,
+  slidesToShow: 6,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 540,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      }
+    }
+  ]
+});

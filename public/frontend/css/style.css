@@ -22,6 +22,7 @@ h1{
     font-family: 'Lato';
     font-size: 45px;
     font-weight: 600;
+    color: var(--darkblue);
 }
 @media (max-width: 768px) {
     h1{
@@ -350,7 +351,7 @@ hr{
 }
 .single-cart{
     width: 100%;
-    padding: 18px 0 12px;
+    padding: 20px 0 15px;
     border-bottom: 1px solid rgb(211, 210, 210);
 }
 .single-cart p{
@@ -391,6 +392,7 @@ hr{
 }
 .cart-details .quantity {
   -moz-appearance: textfield; /* Firefox */
+  outline: none;
   background-color: var(--pinkwhite);
   border: 1px solid var(--violet);
   border-radius: 3px;
@@ -410,6 +412,7 @@ hr{
     background-color: var(--pinkwhite);
 }
 
+/* .title */
 .show-more{
     cursor: pointer;
     height: 36px;
@@ -475,11 +478,12 @@ hr{
     color: var(--pinkwhite);
 }
 .product-title p{
+    color: var(--darkblue);
     font-size: 16px;
     font-weight: 600;
 }
 .product-title p:hover{
-    color: var(--darkblue);
+    color: var(--violet);
 }
 .price p{
     font-weight: 600;
@@ -578,4 +582,43 @@ hr{
     font-weight: 600;
     border: 1px solid var(--darkblue);
     border-radius: 3px;
+}
+
+
+
+/* shop */
+.shop{
+    height: 150px;
+    width: 200px;
+    border: 1px solid rgb(198, 193, 193);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.shop:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.shop img{
+    width: 150px;
+    height: 120px;
+}
+@media (max-width: 992px) {
+    .shop{
+        height: 120px;
+        width: 150px;
+    }
+    .shop img{
+        height: 100px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .shop{
+        height: 100px;
+        width: 130px;
+    }
+    .shop img{
+        height: 80px;
+        width: 100px;
+    }
 }

@@ -261,7 +261,7 @@
                     <div
                         class="col-lg-4 col-md-4 col-sm-2 col-3 d-flex align-items-center justify-content-end right-navigation">
                         <div class="account me-5">
-                            <a title="login" href="{{route('user.login')}}"><span>Login</span><i
+                            <a title="login" href="{{ route('user.login') }}"><span>Login</span><i
                                     class="fa-regular fa-user ms-2"></i></a>
                         </div>
                         <div class="account d-flex">
@@ -279,77 +279,86 @@
                     </div>
                     <div class="cart-content">
                         {{-- <div class="row"> --}}
-                            <div class="col-12">
-                                <div class="cart-close aaa text-right">
-                                    <i class="fa-solid fa-xmark cart-close"></i>
-                                </div>
+                        <div class="col-12">
+                            <div class="cart-close aaa text-right">
+                                <i class="fa-solid fa-xmark cart-close"></i>
                             </div>
-                            <div class="col-12">
-                                {{-- cart items --}}
-                                <div class="cart-items mb-3">
-                                    <div class="single-cart d-inline-flex">
-                                        <div class="cart-image mx-3">
-                                            <img src="{{ asset('uploads/banner/banner1.jpeg') }}" alt="">
-                                        </div>
-                                        <div class="cart-details me-2">
-                                            <a href="#"><p title="Stylish pink coatcvsdfvgsdgfv">Women T-shirt...</p></a>
-                                            <div class="item-quantity d-flex mt-2">  
-                                                <button class="decrease px-2 d-flex align-items-center">-</button>  
-                                                    <input type="number" value="1" class="quantity text-center mx-2" min="1">  
-                                                <button class="increase px-2 d-flex align-items-center">+</button>  
-                                            </div> 
-                                        </div>
-                                        <div class="cart-price mx-2 text-center">
-                                            <i class="fa-solid fa-trash trash"></i>
-                                            <p class="pt-2">&#2547;12000</p>
+                        </div>
+                        <div class="col-12">
+                            {{-- cart items --}}
+                            <div class="cart-items mb-3">
+                                <div class="single-cart d-inline-flex">
+                                    <div class="cart-image mx-3">
+                                        <img src="{{ asset('uploads/banner/banner1.jpeg') }}" alt="">
+                                    </div>
+                                    <div class="cart-details me-2">
+                                        <a href="#">
+                                            <p title="Stylish pink coatcvsdfvgsdgfv">Women T-shirt...</p>
+                                        </a>
+                                        <div class="item-quantity d-flex mt-2">
+                                            <button class="decrease px-2 d-flex align-items-center">-</button>
+                                            <input type="number" value="1" class="quantity text-center mx-2"
+                                                min="1" readonly>
+                                            <button class="increase px-2 d-flex align-items-center">+</button>
                                         </div>
                                     </div>
-                                    <div class="single-cart d-inline-flex">
-                                        <div class="cart-image mx-3">
-                                            <img src="{{ asset('uploads/banner/banner3.jpeg') }}" alt="">
-                                        </div>
-                                        <div class="cart-details me-2">
-                                            <a href="#"><p title="Stylish pink coatcvsdfvgsdgfv">GUCCI HORSEBIT CHAINc...</p></a>
-                                            <div class="item-quantity d-flex mt-2">  
-                                                <button class="decrease px-2 d-flex align-items-center">-</button>  
-                                                    <input type="number" value="1" class="quantity text-center mx-2" min="1">  
-                                                <button class="increase px-2 d-flex align-items-center">+</button>  
-                                            </div> 
-                                        </div>
-                                        <div class="cart-price mx-2 text-center">
-                                            <i class="fa-solid fa-trash trash"></i>
-                                            <p class="pt-2">&#2547;21000</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-cart d-inline-flex">
-                                        <div class="cart-image mx-3">
-                                            <img src="{{ asset('uploads/banner/banner2.jpeg') }}" alt="">
-                                        </div>
-                                        <div class="cart-details me-2">
-                                            <a href="#"><p title="Stylish pink coatcvsdfvgsdgfv">Stylish pink coatc...</p></a>
-                                            <div class="item-quantity d-flex mt-2">  
-                                                <button class="decrease px-2 d-flex align-items-center">-</button>  
-                                                    <input type="number" value="1" class="quantity text-center mx-2" min="1">  
-                                                <button class="increase px-2 d-flex align-items-center">+</button>  
-                                            </div> 
-                                        </div>
-                                        <div class="cart-price mx-2 text-center">
-                                            <i class="fa-solid fa-trash trash"></i>
-                                            <p class="pt-2">&#2547;30000</p>
-                                        </div>
+                                    <div class="cart-price mx-2 text-center">
+                                        <i class="fa-solid fa-trash trash"></i>
+                                        <p class="pt-2">&#2547;<span>11000</span></p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="subtotal d-flex">
-                                    <p>Subtotal:<span class="subtotal-count">&#2547; 99990</span></p>
+                                <div class="single-cart d-inline-flex">
+                                    <div class="cart-image mx-3">
+                                        <img src="{{ asset('uploads/banner/banner3.jpeg') }}" alt="">
+                                    </div>
+                                    <div class="cart-details me-2">
+                                        <a href="#">
+                                            <p title="Stylish pink coatcvsdfvgsdgfv">GUCCI HORSEBIT CHAINc...</p>
+                                        </a>
+                                        <div class="item-quantity d-flex mt-2">
+                                            <button class="decrease px-2 d-flex align-items-center">-</button>
+                                            <input type="number" value="1" class="quantity text-center mx-2"
+                                                min="1" readonly>
+                                            <button class="increase px-2 d-flex align-items-center">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-price mx-2 text-center">
+                                        <i class="fa-solid fa-trash trash"></i>
+                                        <p class="pt-2">&#2547;<span>21000</span></p>
+                                    </div>
+                                </div>
+                                <div class="single-cart d-inline-flex">
+                                    <div class="cart-image mx-3">
+                                        <img src="{{ asset('uploads/banner/banner2.jpeg') }}" alt="">
+                                    </div>
+                                    <div class="cart-details me-2">
+                                        <a href="#">
+                                            <p title="Stylish pink coatcvsdfvgsdgfv">Stylish pink coatc...</p>
+                                        </a>
+                                        <div class="item-quantity d-flex mt-2">
+                                            <button class="decrease px-2 d-flex align-items-center">-</button>
+                                            <input type="number" value="1" class="quantity text-center mx-2"
+                                                min="1" readonly>
+                                            <button class="increase px-2 d-flex align-items-center">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-price mx-2 text-center">
+                                        <i class="fa-solid fa-trash trash"></i>
+                                        <p class="pt-2">&#2547;<span>22100</span></p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="view-cart text-center">
-                                    <a href="#" class="view-text">View Cart</a>
-                                </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="subtotal d-flex">
+                                <p>Subtotal:   <span class="subtotal-count">&#2547;<span class="subtotal-m"></span></span></p>
                             </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="view-cart text-center">
+                                <a href="#" class="view-text">View Cart</a>
+                            </div>
+                        </div>
                         {{-- </div> --}}
 
 

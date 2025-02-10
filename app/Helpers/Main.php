@@ -4,7 +4,7 @@ namespace App\Helpers;
 
 class Main
 {
-    public static function product($img_src, $discount = null, $category = null, $product_name, $price, $after_discount = null)
+    public static function product($img_src, $product_name, $price, $discount = null, $category = null,  $after_discount = null)
     {
         $html = '<div class="col-lg-3 col-md-4 col-6">';
         $html .= ' <div class="product">';
@@ -41,5 +41,15 @@ class Main
         $html .= ' </div> ';
 
         return $html;
+    }
+    
+    public static function shop($img_src){
+        $html = '<div class="shop d-flex align-items-center justify-content-center m-2">';
+        $html .= '  <a href="#">';
+        $html .= '      <img src="'.asset($img_src).'" alt="your-favourite-shop">';
+        $html .= '  </a>';
+        $html .= '</div>';
+        return $html;
+        
     }
 }
