@@ -237,7 +237,7 @@
                                 </div>
                             </div>
                             <div class="col-8">
-                                <a href="#" class="">
+                                <a href="{{route('index')}}" class="">
                                     <img width="180" src="{{ asset('uploads/logo.png') }}" alt="">
                                 </a>
                             </div>

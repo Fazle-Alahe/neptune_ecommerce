@@ -3,7 +3,7 @@
 <div class="container-fluid my-5">
     <div class="container">
         <div class="title d-flex align-items-center justify-content-between">
-            <h1 class="my-4">Recent Products</h1>
+            <h1 class="">Recent Products</h1>
             <p class="show-more">Show more</p>
         </div>
         <div class="row gy-5">
@@ -39,8 +39,32 @@
                     </div>
                 </div>
             </div> --}}
-            
-            {!! Main::product("uploads/products/AC1.png",'Walton WSI-KRYSTALINE-18MH Inverter Split AC Air',  43000, ' ', 'Aircondition', 39000) !!}
+            <!-- Button trigger modal -->
+{{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> --}}
+            {!! Main::product("uploads/products/AC1.png",'Walton WSI-KRYSTALINE-18MH Inverter Split AC Air',  43000, '-10%', 'Aircondition', 39000) !!}
             {!! Main::product("uploads/products/rice-cooker.png",'Walton WRC-SGAE280 Rice Cooker - 2.8 Litre',  5400, '-5%', 'Rice Cooker', 4400) !!}
             {!! Main::product("uploads/products/oil1.jpeg",'Arabian Cheetah SAE-HD 50 Motor Engine Oil - 1 Liter', 600, '-7%', 'Oil',  499) !!}
             {!! Main::product("uploads/products/jbl1.png",'JBL Charge 5 Portable Bluetooth Speaker ', 8243, '-9%', 'Speaker',  7324) !!}

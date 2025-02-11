@@ -1,1 +1,0 @@
-<h1 class="my-5 text-center">Category2</h1>

@@ -3,7 +3,7 @@
 <div class="container-fluid my-5">
     <div class="container">
         <div class="title d-flex align-items-center justify-content-between">
-            <h1 class="my-4">Shop</h1>
+            <h1 class="">Shop</h1>
         </div>
         <div class="all-shop">
             {!! Main::shop("uploads/shop/Arabian.jpeg") !!}

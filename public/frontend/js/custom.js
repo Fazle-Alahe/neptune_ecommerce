@@ -1,3 +1,5 @@
+// modal
+
 // cart
 
 $(document).ready(function(){
@@ -194,4 +196,21 @@ $('.all-shop').slick({
       }
     }
   ]
+});
+
+
+// $('#exampleModal').click(modal());
+// password show/hide
+$(document).ready(function() {
+  $(".toggle-password").click(function() {
+      $(this).toggleClass("fa-eye fa-eye-slash"); // Toggle eye icon
+      
+      var input = $("#password"); // Get input field
+      
+      if (input.attr("type") === "password") {
+          input.attr("type", "text"); // Show password
+      } else {
+          input.attr("type", "password"); // Hide password
+      }
+  });
 });
