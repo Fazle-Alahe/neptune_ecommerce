@@ -49,7 +49,33 @@ class Main
         $html .= '      <img src="'.asset($img_src).'" alt="your-favourite-shop">';
         $html .= '  </a>';
         $html .= '</div>';
+
         return $html;
         
+    }
+
+    public static function regular_form($input_name, $name, $type, $placeholder = null){
+        $html = '<div class="mb-3">';
+        $html .= '  <label for="'.$input_name.'" class="form_label">'.$name.'</label><br>';
+        $html .= '    <input type="'.$type.'" name="'.$input_name.'" class="form_input" placeholder="'.$placeholder.'">';
+        $html .= '</div>';
+        
+        return $html;
+    }
+
+    public static function password_form($name, $id, $input_name, $placeholder = null){
+        $html = '<div class="mb-3">';
+        $html .= '<label for="password" class="form_label">'.$name.'</label><br>';
+        $html .= '<div class="eye_password">';
+        $html .= '<input type="password" id="'.$id.'" name="'.$input_name.'" class="form_input" placeholder="'.$placeholder.'">';
+        $html .= '<img class="eye" 
+                src="'.asset('uploads/eye.png').'";
+                data-target="'.$id.'" 
+                data-visible="'.asset('uploads/eye.png').'" 
+                data-hidden="'.asset('uploads/hidden.png').'" 
+                alt="Toggle Password">';
+        $html .= '</div>';
+        $html .= ' </div>';
+        return $html;
     }
 }

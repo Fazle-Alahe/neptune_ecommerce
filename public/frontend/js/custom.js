@@ -201,16 +201,19 @@ $('.all-shop').slick({
 
 // $('#exampleModal').click(modal());
 // password show/hide
-$(document).ready(function() {
-  $(".toggle-password").click(function() {
-      $(this).toggleClass("fa-eye fa-eye-slash"); // Toggle eye icon
-      
-      var input = $("#password"); // Get input field
-      
-      if (input.attr("type") === "password") {
-          input.attr("type", "text"); // Show password
-      } else {
-          input.attr("type", "password"); // Hide password
-      }
+$(document).ready(function () {
+
+  $(".eye").click(function () {
+    var input = $("#" + $(this).attr("data-target"));
+
+    if(input.attr("type") === 'password'){
+      input.attr("type", "text");
+      $(this).attr("src", $(this).attr("data-hidden"));
+    }
+    else{ 
+      input.attr("type", "password");
+      $(this).attr("src", $(this).attr("data-visible"));
+    }
+
   });
 });

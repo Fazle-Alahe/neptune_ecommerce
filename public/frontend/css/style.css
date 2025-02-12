@@ -644,38 +644,49 @@ hr{
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .13), 0 1px 2px 0 rgba(0, 0, 0, .11);
 }
 .login-image{
+    position: relative;
     background-color: #FEE4BF;
-    height: 650px;
+    height: auto;
     border-radius: 8px;
 }
 .shopping-image{
-    margin-top: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 400px;
+}
+.nep_logo{
+    z-index: 1;
 }
 @media (max-width: 1200px) {
     
     .shopping-image{
-        margin-top: 60px;
         height: 300px;
     }
     .login-form{
         width: 100%;
     }
 }
+@media (max-width: 992px) {
+    .login-image{
+        height: 500px;
+    }
+}
 .reg_link p{
     width: 160px;
     padding: 10px 5px;
-    background-color: var(--darkblue);
+    background-color: var(--violet);
     color: var(--pinkwhite);
     font-size: 17px;
     font-weight: 600;
-    border: 1px solid var(--darkblue);
+    border: 1px solid var(--violet);
     border-radius: 3px;
     transition: 0.3s;
 }
 .reg_link p:hover{
     background-color: var(--pinkwhite);
-    color: var(--darkblue);
+    color: var(--violet);
 }
 .login-header h2{
     font-size: 35px;
@@ -705,6 +716,7 @@ hr{
     position: absolute;
     top: 17px;
     right: 10px;
+    width: 20px;
 }
 .forgot_pass{
     font-size: 17px;
@@ -748,7 +760,7 @@ hr{
         height: 350px;
     }
     .shopping-image{
-        margin-top: 1px;
+        margin-top: 30px;
         height: 200px;
     }
     .login-form{
