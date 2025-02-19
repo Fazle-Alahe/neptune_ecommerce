@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/slick/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/slick/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/lightslider.css') }}">
 
     @stack('banner2')
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">

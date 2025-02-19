@@ -1,81 +1,50 @@
 @extends('frontend.layout.master')
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-5">
-                <div class = "card-wrapper">
-                    <div class = "card">
-                        <!-- card left -->
-                        <div class = "product-imgs">
-                            <div class = "img-display">
-                                <div class = "img-showcase">
-                                    <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg"
-                                        alt = "shoe image">
-                                    <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_2.jpg"
-                                        alt = "shoe image">
-                                    <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg"
-                                        alt = "shoe image">
-                                    <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg"
-                                        alt = "shoe image">
-                                    <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg"
-                                        alt = "shoe image">
-                                </div>
-                            </div>
-                            <div class = "img-select">
-                                <div class = "img-item">
-                                    <a href = "#" data-id = "1">
-                                        <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg"
-                                            alt = "shoe image">
-                                    </a>
-                                </div>
-                                <div class = "img-item">
-                                    <a href = "#" data-id = "5">
-                                        <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg"
-                                            alt = "shoe image">
-                                    </a>
-                                </div>
-                                <div class = "img-item">
-                                    <a href = "#" data-id = "2">
-                                        <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_2.jpg"
-                                            alt = "shoe image">
-                                    </a>
-                                </div>
-                                <div class = "img-item">
-                                    <a href = "#" data-id = "3">
-                                        <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg"
-                                            alt = "shoe image">
-                                    </a>
-                                </div>
-                                <div class = "img-item">
-                                    <a href = "#" data-id = "6">
-                                        <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg"
-                                            alt = "shoe image">
-                                    </a>
-                                </div>
-                                <div class = "img-item">
-                                    <a href = "#" data-id = "4">
-                                        <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg"
-                                            alt = "shoe image">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+    <div class="container ">
+        <div class="product-details">
+            <div class="row">
+                <div class="col-5">
+                      
+                    <div class="demo">
+                        <ul id="lightSlider">
+                            
+                        <li data-thumb="{{asset('uploads/banner/banner1.jpeg')}}" data-src="largeImage1">
+                            <img src="{{asset('uploads/banner/banner1.jpeg')}}" />
+                          </li>
+                          <li data-thumb="{{asset('uploads/banner/banner2.jpeg')}}" data-src="largeImage2">
+                            <img src="{{asset('uploads/banner/banner2.jpeg')}}" />
+                          </li>
+                          <li data-thumb="{{asset('uploads/login1.png')}}" data-src="largeImage3">
+                            <img src="{{asset('uploads/login1.png')}}" />
+                          </li>
+                          <li data-thumb="{{asset('uploads/banner/banner4.jpeg')}}" data-src="largeImage4">
+                            <img src="{{asset('uploads/banner/banner4.jpeg')}}" />
+                          </li>
+                          <li data-thumb="{{asset('uploads/banner/banner3.jpeg')}}" data-src="largeImage5">
+                            <img src="{{asset('uploads/banner/banner3.jpeg')}}" />
+                          </li>
+                          <li data-thumb="{{asset('uploads/banner/banner4.jpeg')}}" data-src="largeImage4">
+                            <img src="{{asset('uploads/banner/banner4.jpeg')}}" />
+                          </li>
+                          <li data-thumb="{{asset('uploads/banner/banner3.jpeg')}}" data-src="largeImage5">
+                            <img src="{{asset('uploads/banner/banner3.jpeg')}}" />
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="pd-title">
+                        <p>Walton WSI-KRYSTALINE-18MH Inverter Split AC Air</p>
+                    </div>
+                    <div class="pd-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
                 </div>
             </div>
-            <div class="col-7">
-                <div class="pd-title">
-                    <p>Walton WSI-KRYSTALINE-18MH Inverter Split AC Air</p>
-                </div>
-                <div class="pd-rating">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-            </div>
         </div>
-    </div>
     </div>
 @endsection

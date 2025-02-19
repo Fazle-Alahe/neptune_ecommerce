@@ -125,6 +125,7 @@
 
 <script src="{{asset('frontend/js/jquery-3.7.1.min.js')}}"></script>
 <script src="{{asset('frontend/js/slick/slick.min.js')}}"></script>
+<script src="{{asset('frontend/js/lightslider.js')}}"></script>
 <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('frontend/js/all.min.js')}}"></script>
