@@ -29,6 +29,9 @@
                           <li data-thumb="{{asset('uploads/banner/banner3.jpeg')}}" data-src="largeImage5">
                             <img src="{{asset('uploads/banner/banner3.jpeg')}}" />
                           </li>
+                          <li data-thumb="{{asset('uploads/banner/banner3.jpeg')}}" data-src="largeImage5">
+                            <img src="{{asset('uploads/banner/banner3.jpeg')}}" />
+                          </li>
                         </ul>
                     </div>
                 </div>

@@ -28,7 +28,7 @@
         thumbItem: 10,
         pager: true,
         gallery: false,
-        galleryMargin: 5,
+        galleryMargin: 15,
         thumbMargin: 5,
         currentPagerPosition: 'middle',
         enableTouch: true,
