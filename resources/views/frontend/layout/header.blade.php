@@ -262,7 +262,7 @@
                     <div
                         class="col-lg-4 col-md-4 col-sm-2 col-3 d-flex align-items-center justify-content-end right-navigation">
                         <div class="account me-5">
-                            <a title="login" href="{{ route('user.login') }}"><span>Login</span><i
+                            <a title="login" href="{{ route('customer.login') }}"><span>Login</span><i
                                     class="fa-regular fa-user ms-2"></i></a>
                         </div>
                         <div class="account d-flex">

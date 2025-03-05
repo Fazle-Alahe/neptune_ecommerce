@@ -10,7 +10,7 @@
                             </a>
                         </div>
                         <div class="col-6 nep_logo reg_link d-flex justify-content-end">
-                            <a href="{{route('user.register')}}" class=""><p class=" me-4">Create account</p></a>
+                            <a href="{{route('customer.register')}}" class=""><p class=" me-4">Create account</p></a>
                         </div>
                     </div>
                     <img src="{{asset('uploads/login2.jpg')}}" class="shopping-image" alt="">

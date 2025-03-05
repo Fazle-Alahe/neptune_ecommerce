@@ -10,7 +10,7 @@
                             </a>
                         </div>
                         <div class="col-6 reg_link d-flex justify-content-end">
-                            <a href="{{route('user.register')}}" class=""><p class=" me-4">Create account</p></a>
+                            <a href="{{route('customer.register')}}" class=""><p class=" me-4">Create account</p></a>
                         </div>
                     </div>
                     <img src="{{asset('uploads/login2.jpg')}}" class="shopping-image" alt="">
@@ -27,7 +27,7 @@
                             {!! Main::password_form("Password", "log_password1", "password",) !!}
                             
                             <div class="mb-3">
-                                <a href="{{route('reset.password')}}"><p class="forgot_pass">Forgot password?</p></a>
+                                <a href="{{route('customer.reset.password')}}"><p class="forgot_pass">Forgot password?</p></a>
                             </div>
                             <div class="mb-3">
                                 <button type="submit" class="form_button">Login</button>
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <div class="mb-3 text-center">
-                                <p>Don't have an account? <a href="#"><span class="forgot_pass">Create free account</span> </a></p>
+                                <p>Don't have an account? <a href="{{route('customer.register')}}"><span class="forgot_pass">Create free account</span> </a></p>
                             </div>
                         </form>
                     </div>

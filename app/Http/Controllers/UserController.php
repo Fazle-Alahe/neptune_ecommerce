@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function user_login(){
-        return view('frontend.auth.login');
+        return view('admin.auth.login');
     }
     
-    public function user_register(){
-        return view('frontend.auth.register');
-    }
+    // public function user_register(){
+    //     return view('admin.auth.register');
+    // }
 
-    public function reset_password(){
-        return view('frontend.auth.resetpassword');
-    }
+    // public function reset_password(){
+    //     return view('frontend.auth.resetpassword');
+    // }
 }

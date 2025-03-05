@@ -10,7 +10,7 @@
                             </a>
                         </div>
                         <div class="col-6 reg_link d-flex justify-content-end">
-                            <a href="{{route('user.login')}}" class=""><p class=" me-4">Log In</p></a>
+                            <a href="{{route('customer.login')}}" class=""><p class=" me-4">Log In</p></a>
                         </div>
                     </div>
                     <img src="{{asset('uploads/login2.jpg')}}" class="shopping-image" alt="">
@@ -34,7 +34,7 @@
                                 <button class="form_button">Signup</button>
                             </div>
                             <div class="mb-3 text-center">
-                                <p>Already have an account? <a href="{{route('user.login')}}"><span class="forgot_pass">Login here</span> </a></p>
+                                <p>Already have an account? <a href="{{route('customer.login')}}"><span class="forgot_pass">Login here</span> </a></p>
                             </div>
                         </form>
                     </div>
