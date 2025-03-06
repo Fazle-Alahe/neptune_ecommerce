@@ -20,6 +20,9 @@
     <!-- App css -->
     <link href="{{ asset('admin/assets/css/style.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css">
+
+    @stack('admin_css')
+
     <script src="{{ asset('admin/assets/ijs/config.js') }}"></script>
 </head>
 
@@ -52,45 +55,24 @@
                     <li class="menu-title">Menu</li>
 
                     <li class="menu-item">
-                        <a class='menu-link waves-effect waves-light' href='index.html'>
+                        <a class='menu-link waves-effect waves-light' href='{{ route('dashboard') }}'>
                             <span class="menu-icon"><i class="bx bx-home-smile"></i></span>
                             <span class="menu-text"> Dashboards </span>
-                            <span class="badge bg-primary rounded ms-auto">01</span>
+                            {{-- <span class="badge bg-primary rounded ms-auto">01</span> --}}
                         </a>
                     </li>
-
-                    <li class="menu-title">Custom</li>
-
-                    <li class="menu-item">
-                        <a href="#menuExpages" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
-                            <span class="menu-icon"><i class="bx bx-file"></i></span>
-                            <span class="menu-text"> Extra Pages </span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <div class="collapse" id="menuExpages">
-                            <ul class="sub-menu">
-                                <li class="menu-item">
-                                    <a class='menu-link' href='pages-starter.html'>
-                                        <span class="menu-text">Starter</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="menu-title">Components</li>
 
                     <li class="menu-item">
                         <a href="#menuComponentsui" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
-                            <span class="menu-icon"><i class="bx bx-cookie"></i></span>
-                            <span class="menu-text"> UI Elements </span>
+                            <span class="menu-icon"><i class="bx bx-user"></i></span>
+                            <span class="menu-text"> User </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <div class="collapse" id="menuComponentsui">
                             <ul class="sub-menu">
                                 <li class="menu-item">
-                                    <a class='menu-link' href='ui-alerts.html'>
-                                        <span class="menu-text">Alerts</span>
+                                    <a class='menu-link' href='{{ route('user.list') }}'>
+                                        <span class="menu-text">Users</span>
                                     </a>
                                 </li>
                             </ul>
@@ -544,6 +526,8 @@
 
     <!-- Dashboard init-->
     <script src="{{ asset('admin/assets/js/pages/dashboard.js') }}"></script>
+    
+    <script src="{{asset('frontend/js/custom.js')}}"></script>
 
 </body>
 

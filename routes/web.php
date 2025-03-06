@@ -6,14 +6,15 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+// Route::get('/', function () {
+//     return view('frontend.index');
+// });
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
 // user auth
-Route::get('user/login', [UserController::class, 'user_login'])->name('user.login');
+Route::get('/user/login', [UserController::class, 'user_login'])->name('user.login');
+Route::get('user/list', [UserController::class, 'user_list'])->name('user.list');
 
 // customer auth
 Route::get('/customer/login', [CustomerController::class, 'customer_login'])->name('customer.login');

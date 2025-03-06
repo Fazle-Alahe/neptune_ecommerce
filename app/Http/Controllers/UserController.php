@@ -10,6 +10,10 @@ class UserController extends Controller
         return view('admin.auth.login');
     }
     
+
+    public function user_list(){
+        return view('admin.users.list');
+    }
     // public function user_register(){
     //     return view('admin.auth.register');
     // }

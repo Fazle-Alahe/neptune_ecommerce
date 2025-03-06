@@ -29,7 +29,7 @@
                     <div class="card-body p-4">
 
                         <div class="text-center w-75 mx-auto auth-logo mb-4">
-                            <a class='logo-dark' href='index.html'>
+                            <a class='logo-dark' href='{{ route('index') }}'>
                                 <span><img src="{{ asset('admin/assets/images/logo-dark.png') }}" alt="" height="22"></span>
                             </a>
 
@@ -70,7 +70,7 @@
                 <div class="row mt-3">
                     <div class="col-12 text-center">
                         <p class="text-white-50"> <a class='text-white-50 ms-1' href='pages-register.html'>Forgot your password?</a></p>
-                        <p class="text-white-50">Don't have an account? <a class='text-white font-weight-medium ms-1' href='pages-register.html'>Sign Up</a></p>
+                        {{-- <p class="text-white-50">Don't have an account? <a class='text-white font-weight-medium ms-1' href='pages-register.html'>Sign Up</a></p> --}}
                     </div> <!-- end col -->
                 </div>
                 <!-- end row -->
