@@ -21,61 +21,48 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4">
-                    <div class="row">
+                    <form action="" method="" enctype="multipart/form-data">
+                        @csrf
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="field-1" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" id="field-1" placeholder="John">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="field-1" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="field-1" placeholder="John">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="field-2" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="field-2" placeholder="Doe">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="field-2" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" id="field-2" placeholder="Doe">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    {!! Main::password_field("Password", "password1", "password",) !!}
                                 </div>
+                                <div class="col-md-6">
+                                    {!! Main::password_field("Confirm Password", "password2", "confirm_password",) !!}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-3 no-margin">
+                                        <label for="field-7" class="form-label">Personal Info</label>
+                                        <textarea class="form-control" id="field-7" placeholder="Write something about yourself"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                {!! Main::ShowUploadImageHtml('inputid', '', 'image') !!}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-3 eye_parent">
-                                    <label for="password" class="form-label">Password</label>
-                                    <input type="password" name="password" class="form-control ">
-                                    <img src="{{ asset('uploads/eye.png') }}" class="eye" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3 eye_parent">
-                                    <label for="confirm_password" class="form-label">Confirm Password</label>
-                                    <input type="password" name="confirm_password" class="form-control">
-                                    <img src="{{ asset('uploads/eye.png') }}" class="eye" alt="">
-                                </div>
-                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-info waves-effect waves-light">Add User</button>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="mb-3 no-margin">
-                                    <label for="field-7" class="form-label">Personal Info</label>
-                                    <textarea class="form-control" id="field-7" placeholder="Write something about yourself"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            {!! Main::ShowUploadImageHtml('inputid', '', 'image') !!}
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="mb-3">
-                                    <label for="image" class="form-label">Image</label>
-                                    <input type="file" class="form-control" name="image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-info waves-effect waves-light">Add User</button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div><!-- /.modal -->

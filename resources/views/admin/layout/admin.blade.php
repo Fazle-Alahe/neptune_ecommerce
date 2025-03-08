@@ -23,7 +23,7 @@
 
     @stack('admin_css')
 
-    <script src="{{ asset('admin/assets/ijs/config.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/config.js') }}"></script>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
         <!-- ========== Left Sidebar ========== -->
         <div class="main-menu">
             <!-- Brand Logo -->
-            <div class="logo-box">
+            {{-- <div class="logo-box">
                 <!-- Brand Logo Light -->
                 <a class='logo-light' href='index.html'>
                     <img src="{{ asset('admin/assets/images/logo-light.png') }}" alt="logo" class="logo-lg" height="28">
@@ -46,7 +46,7 @@
                     <img src="{{ asset('admin/assets/images/logo-dark.png') }}" alt="dark logo" class="logo-lg" height="28">
                     <img src="{{ asset('admin/assets/images/logo-sm.png') }}" alt="small logo" class="logo-sm" height="28">
                 </a>
-            </div>
+            </div> --}}
 
             <!--- Menu -->
             <div data-simplebar>
@@ -229,7 +229,7 @@
                     <div class="topbar-menu d-flex align-items-center gap-lg-2 gap-1">
 
                         <!-- Brand Logo -->
-                        <div class="logo-box">
+                        {{-- <div class="logo-box">
                             <!-- Brand Logo Light -->
                             <a class='logo-light' href='index.html'>
                                 <img src="assets/images/logo-light.png" alt="logo" class="logo-lg" height="22">
@@ -241,7 +241,7 @@
                                 <img src="assets/images/logo-dark.png" alt="dark logo" class="logo-lg" height="22">
                                 <img src="assets/images/logo-sm.png" alt="small logo" class="logo-sm" height="22">
                             </a>
-                        </div>
+                        </div> --}}
 
                         <!-- Sidebar Menu Toggle Button -->
                         <button class="button-toggle-menu">
@@ -269,7 +269,7 @@
                         </li>
 
 
-                        <li class="dropdown d-none d-md-inline-block">
+                        {{-- <li class="dropdown d-none d-md-inline-block">
                             <a class="nav-link dropdown-toggle waves-effect waves-light arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <img src="assets/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" height="18">
                             </a>
@@ -296,7 +296,7 @@
                                 </a>
 
                             </div>
-                        </li>
+                        </li> --}}
 
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle waves-effect waves-light arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
@@ -366,7 +366,7 @@
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-shrink-0">
                                                     <div class="notify-icon">
-                                                        <img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" />
+                                                        {{-- <img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" /> --}}
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1 text-truncate ms-2">
@@ -404,7 +404,7 @@
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-shrink-0">
                                                     <div class="notify-icon">
-                                                        <img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" />
+                                                        {{-- <img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" /> --}}
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1 text-truncate ms-2">
@@ -434,7 +434,7 @@
 
                         <li class="dropdown">
                             <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="assets/images/users/avatar-4.jpg" alt="user-image" class="rounded-circle">
+                                {{-- <img src="assets/images/users/avatar-4.jpg" alt="user-image" class="rounded-circle"> --}}
                                 <span class="ms-1 d-none d-md-inline-block">
                                     Jamie D. <i class="mdi mdi-chevron-down"></i>
                                 </span>
@@ -511,6 +511,8 @@
     <!-- END wrapper -->
 
     <!-- App js -->
+    <script src="{{asset('frontend/js/jquery-3.7.1.min.js')}}"></script>
+
     <script src="{{ asset('admin/assets/js/vendor.min.js') }}"></script>
     <script src="{{ asset('admin/assets/js/app.js') }}"></script>
 
@@ -526,8 +528,9 @@
 
     <!-- Dashboard init-->
     <script src="{{ asset('admin/assets/js/pages/dashboard.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/custom.js') }}"></script>
     
-    <script src="{{asset('frontend/js/custom.js')}}"></script>
+    {{-- <script src="{{asset('frontend/js/custom.js')}}"></script> --}}
 
 </body>
 
