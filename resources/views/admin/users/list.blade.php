@@ -26,7 +26,7 @@
     </div>
 
 
-    <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: <?= (session('error')?'block':'none') ?>;">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="modal-body p-4">
-                    <form action="{{ route('user.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('user.store') }}" method="POST" enctype="multipart/form-data" >
                         @csrf
                         <div class="row">
                             <div class="row">
@@ -43,7 +43,7 @@
                                     <div class="mb-3">
                                         <label for="field-1" class="form-label">First Name</label>
                                         <input type="text" class="form-control" name="first_name" id="field-1"
-                                            placeholder="John">
+                                            placeholder="John" required>
                                         @error('first_name')
                                             <strong class="text-danger">{{ $message }}</strong>
                                         @enderror

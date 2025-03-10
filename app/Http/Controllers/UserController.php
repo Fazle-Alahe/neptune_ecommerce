@@ -28,8 +28,8 @@ class UserController extends Controller
 
     public function user_store(Request $request){
         // Validate form input
-        // $validator = Validator::make($request->all(), [
-        $request->validate([
+        $validator = Validator::make($request->all(), [
+        // $request->validate([
 
             'first_name' => 'required|string|max:60',
             'last_name' => 'string|max:60',
@@ -45,9 +45,9 @@ class UserController extends Controller
         ]);
         // ]);
 
-        // if ($validator->fails()) {
-        //     return redirect()->back()->withErrors($validator)->withInput();  // RedirectResponse
-        // }
+        if ($validator->fails()) {
+            return redirect()->back()->with('error')->withErrors($validator)->withInput();  // RedirectResponse
+        }
         
         if($request->password != $request->confirm_password){
             return back()->with('wrong', "Password doesn't match!");
