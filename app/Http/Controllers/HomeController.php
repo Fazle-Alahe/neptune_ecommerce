@@ -24,10 +24,10 @@ class HomeController extends Controller
         if ($request->hasFile('image')) {
             
             $file = $request->file('image');
-            $fileName = uniqid() .random_int(50000, 60000) . '.' . $file->getClientOriginalExtension();
+            $fileName = 'uploads/'.uniqid() .random_int(50000, 60000) . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('uploads/'), $fileName);
     
-            $previewPath = asset('uploads/' . $fileName);
+            $previewPath = asset($fileName);
     
             return response()->json([
                 'success' => true,

@@ -20,7 +20,6 @@ $(document).ready(function(){
   $(".cart-content").click(function(e) {
     e.stopPropagation();
   });
-
 });
 
 // hamburger
@@ -147,6 +146,7 @@ function updateTotals(){
 
 //cart item remove
   $('.trash').click(function(){
+    // alert();
      $(this).closest('.single-cart').remove();
      updateTotals();
   });
