@@ -102,7 +102,7 @@ class Main
         $html = '<div class="mb-3 eye_parent">';
         $html .= '<label for="password" class="form-label">' . $name . '</label><br>';
         $html .= '<div class="eye_password">';
-        $html .= '<input type="password" id="' . $id . '" name="' . $input_name . '" class="form-control" placeholder="' . $placeholder . '">';
+        $html .= '<input type="password" id="' . $id . '" name="' . $input_name . '" class="form-control" placeholder="' . $placeholder . '" required>';
         $html .= '<img class="eye" 
                 src="' . asset('uploads/eye.png') . '";
                 data-target="' . $id . '" 

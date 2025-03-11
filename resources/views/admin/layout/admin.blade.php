@@ -15,9 +15,15 @@
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('admin/assets/images/favicon.ico') }}">
-
     <link href="{{ asset('admin/assets/libs/morris.js/morris.css') }}" rel="stylesheet" type="text/css" />
 
+     <!-- Plugins css -->
+     <link href="{{ asset('admin/assets/libs/mohithg-switchery/switchery.min.css') }}" rel="stylesheet" type="text/css" />
+     <link href="{{ asset('admin/assets/libs/multiselect/css/multi-select.css') }}" rel="stylesheet" type="text/css" />
+     <link href="{{ asset('admin/assets/libs/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css" />
+     <link href="{{ asset('admin/assets/libs/selectize/css/selectize.bootstrap3.css') }}" rel="stylesheet" type="text/css" />
+     <link href="{{ asset('admin/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css') }}" rel="stylesheet" type="text/css" />
+     
     <!-- App css -->
     <link href="{{ asset('admin/assets/css/style.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css">
@@ -522,10 +528,17 @@
 
     <!-- Sparkline Js-->
     <script src="{{ asset('admin/assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
-
     <script src="{{ asset('admin/assets/libs/morris.js/morris.min.js') }}"></script>
-
     <script src="{{ asset('admin/assets/libs/raphael/raphael.min.js') }}"></script>
+
+    <!-- Plugins Js -->
+    <script src="{{ asset('admin/assets/libs/selectize/js/standalone/selectize.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/mohithg-switchery/switchery.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/multiselect/js/jquery.multi-select.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/jquery.quicksearch/jquery.quicksearch.min.html') }}"></script>
+    <script src="{{ asset('admin/assets/libs/select2/js/select2.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js') }}"></script>
 
     <!-- Dashboard init-->
     <script src="{{ asset('admin/assets/js/pages/dashboard.js') }}"></script>

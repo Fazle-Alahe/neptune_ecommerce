@@ -17,6 +17,8 @@ Route::get('/user/login', [UserController::class, 'user_login'])->name('user.log
 Route::get('user/list', [UserController::class, 'user_list'])->name('user.list');
 Route::post('user/store', [UserController::class, 'user_store'])->name('user.store');
 
+Route::get('user/destroy/{$id}', [UserController::class, 'user_destroy'])->name('user.destroy');
+
 // customer auth
 Route::get('/customer/login', [CustomerController::class, 'customer_login'])->name('customer.login');
 Route::get('/customer/register', [CustomerController::class, 'customer_register'])->name('customer.register');

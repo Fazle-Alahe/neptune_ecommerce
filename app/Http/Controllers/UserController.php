@@ -16,7 +16,10 @@ class UserController extends Controller
     
 
     public function user_list(){
-        return view('admin.users.list');
+        $users = User::orderBy('id', 'desc')->paginate(10);
+        return view('admin.users.list',[
+            'users' => $users,
+        ]);
     }
     // public function user_register(){
     //     return view('admin.auth.register');
@@ -28,11 +31,11 @@ class UserController extends Controller
 
     public function user_store(Request $request){
         // Validate form input
-        $validator = Validator::make($request->all(), [
-        // $request->validate([
+        // $validator = Validator::make($request->all(), [
+        $request->validate([
 
             'first_name' => 'required|string|max:60',
-            'last_name' => 'string|max:60',
+            'last_name' => 'nullable|string|max:60',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => [
                 'required',
@@ -41,13 +44,13 @@ class UserController extends Controller
                     ->numbers()
                     ->symbols()
             ],
-            'img_path' => 'string|max:255',
+            'img_path' => 'nullable|string|max:255',
         ]);
         // ]);
 
-        if ($validator->fails()) {
-            return redirect()->back()->with('error')->withErrors($validator)->withInput();  // RedirectResponse
-        }
+        // if ($validator->fails()) {
+        //     return redirect()->back()->withErrors($validator)->withInput();  // RedirectResponse
+        // }
         
         if($request->password != $request->confirm_password){
             return back()->with('wrong', "Password doesn't match!");
@@ -62,5 +65,14 @@ class UserController extends Controller
             'created_at' => Carbon::now(),
         ]);
         return back()->with('success', 'User created successfully');
+    }
+
+    public function user_destroy($id){
+        $user = User::find($id);
+        $user->update([
+            'is_active' => 0,
+        ]);
+        $user->delete();
+        return back()-with('wrong', 'User moved to trash');
     }
 }
