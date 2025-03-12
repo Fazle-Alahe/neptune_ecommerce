@@ -7,9 +7,13 @@
             </div>
 
             <div class="modal-body">
+                {{-- <form id="userForm"> --}}
                 <form action="{{ route('user.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
+
+                        <input type="hidden" id="userId" name="id">
+
                         <div class="row gx-3">
                             <div class="col-md-6">
                                 <div class="mb-3">

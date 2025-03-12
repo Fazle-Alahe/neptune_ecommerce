@@ -82,6 +82,11 @@
                                         <span class="menu-text">Users</span>
                                     </a>
                                 </li>
+                                <li class="menu-item">
+                                    <a class='menu-link' href='{{ route('trash.user') }}'>
+                                        <span class="menu-text">Trash Users</span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </li>

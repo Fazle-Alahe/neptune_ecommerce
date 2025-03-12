@@ -16,8 +16,14 @@ Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard'
 Route::get('/user/login', [UserController::class, 'user_login'])->name('user.login');
 Route::get('user/list', [UserController::class, 'user_list'])->name('user.list');
 Route::post('user/store', [UserController::class, 'user_store'])->name('user.store');
+Route::post('user/update/{id}', [UserController::class, 'user_update'])->name('user.update');
 
-Route::get('user/destroy/{$id}', [UserController::class, 'user_destroy'])->name('user.destroy');
+Route::get('/user/active/{id}', [UserController::class, 'user_active'])->name('user.active');
+Route::get('/user/destroy/{id}', [UserController::class, 'user_destroy'])->name('user.destroy');
+Route::post('/user/select/destroy', [UserController::class, 'user_select_destroy'])->name('user.select.destroy');
+Route::get('/trash/user', [UserController::class, 'trash_user'])->name('trash.user');
+Route::get('/user/restore/{id}', [UserController::class, 'user_restore'])->name('user.restore');
+Route::get('/user/delete/{id}', [UserController::class, 'user_delete'])->name('user.delete');
 
 // customer auth
 Route::get('/customer/login', [CustomerController::class, 'customer_login'])->name('customer.login');
