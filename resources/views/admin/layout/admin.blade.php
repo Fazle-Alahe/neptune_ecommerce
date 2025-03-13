@@ -478,7 +478,7 @@
                                 <div class="dropdown-divider"></div>
 
                                 <!-- item-->
-                                <a class='dropdown-item notify-item' href='pages-login.html'>
+                                <a class='dropdown-item notify-item' href='{{ route('user.logout') }}'>
                                     <i class="fe-log-out"></i>
                                     <span>Logout</span>
                                 </a>
