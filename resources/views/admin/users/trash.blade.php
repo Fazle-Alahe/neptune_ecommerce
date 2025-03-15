@@ -24,7 +24,7 @@
 </div>
 
 <div class="container my-3">
-    <form action="{{ route('user.select.destroy') }}" method="post">
+    <form action="{{ route('user.select.delete') }}" method="post">
         @csrf
         <div class="card">
             <table class="table table-bordered text-center">

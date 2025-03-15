@@ -77,8 +77,6 @@ class UserController extends Controller
             $user->update([
                 'is_active' => 1,
             ]);
-            // echo $user->is_active;
-            // die;
             return back()->with('success', 'User has been activated!');
         } else {
             $user->update([
@@ -122,19 +120,39 @@ class UserController extends Controller
         ]);
     }
 
-    public function user_restore($id){
+    public function user_restore($id)
+    {
         User::onlyTrashed()->find($id)->restore();
         return back()->with('success', 'User has been restored');
     }
 
-    public function user_delete($id){
+    public function user_delete($id)
+    {
         $user = User::onlyTrashed()->find($id);
-        if($user->img_path != ''){
+        if ($user->img_path != '') {
             $trim = trim($user->img_path, 'uploads');
-            $image_delete = public_path('uploads'.$trim);
+            $image_delete = public_path('uploads' . $trim);
             unlink($image_delete);
         }
         $user->forceDelete();
         return back()->with('wrong', 'User deleted permanently');
-    } 
+    }
+
+    public function user_select_delete(Request $request)
+    {
+        if ($request->user_id == '') {
+            return back();
+        } else {
+            foreach ($request->user_id as $user) {
+                $users = User::onlyTrashed()->find($user);
+                if ($users->img_path != '') {
+                    $trim = trim($users->img_path, 'uploads');
+                    $image_delete = public_path('uploads' . $trim);
+                    unlink($image_delete);
+                }
+                $users->forceDelete();
+            }
+            return back()->with('wrong', 'Users deleted permanently');
+        }
+    }
 }
