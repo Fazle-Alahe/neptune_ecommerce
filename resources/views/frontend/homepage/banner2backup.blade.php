@@ -1,7 +1,7 @@
 @push('banner2')
     
 <style>
-    .banner2-section .banner{
+    .banner2-section .container{
         background-color: #F3F4F6;
         padding: 0 !important;
         border-radius: 10px;
@@ -66,7 +66,6 @@
         margin-top: 3px;
     }
 
-
     @media (max-width: 768px) {
         
     }
@@ -77,10 +76,10 @@
 
 {{-- banner 2 --}}
 <section class="banner2-section py-2">
-    <div class="container banner">
-        <div class="row d-flex">
+    <div class="container">
+        <div class="row">
             <div class="side-menu">
-                <ul class="text-start">
+                <ul class="">
                     <li class="me-2 py-2 category"><a href="#" class="pe-4">Fashion<i class="fa-solid fa-chevron-down ms-1"></i></a>
                         <div class="child-category">
                             <ul>

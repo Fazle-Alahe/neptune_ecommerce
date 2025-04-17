@@ -2,8 +2,8 @@
 
 @section('content')
 
-@include('frontend.homepage.banner1')
-{{-- @include('frontend.homepage.banner2') --}}
+{{-- @include('frontend.homepage.banner1') --}}
+@include('frontend.homepage.banner2')
 @include('frontend.homepage.trending')
 @include('frontend.homepage.shops')
 @include('frontend.homepage.featured')
