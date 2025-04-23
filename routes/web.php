@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
@@ -46,6 +47,9 @@ Route::post('/upload-image', [HomeController::class, 'upload_image']);
 
 // frontend product
 Route::get('product/details', [ProductController::class, 'product_details'])->name('product.details');
+
+//checkout
+Route::get('/checkout',[CheckoutController::class,'checkout'])->name('checkout');
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');

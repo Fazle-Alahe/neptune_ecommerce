@@ -290,7 +290,7 @@
                             <div class="cart-items mb-3">
                                 <div class="single-cart d-inline-flex">
                                     <div class="cart-image mx-3">
-                                        <img src="{{ asset('uploads/banner/banner1.jpeg') }}" alt="">
+                                        <img src="{{ asset('uploads/banner/banner1.jpeg') }}" alt="" class="rounded">
                                     </div>
                                     <div class="cart-details me-2">
                                         <a href="#">
@@ -310,7 +310,7 @@
                                 </div>
                                 <div class="single-cart d-inline-flex">
                                     <div class="cart-image mx-3">
-                                        <img src="{{ asset('uploads/banner/banner3.jpeg') }}" alt="">
+                                        <img src="{{ asset('uploads/banner/banner3.jpeg') }}" alt="" class="rounded">
                                     </div>
                                     <div class="cart-details me-2">
                                         <a href="#">
@@ -330,7 +330,7 @@
                                 </div>
                                 <div class="single-cart d-inline-flex">
                                     <div class="cart-image mx-3">
-                                        <img src="{{ asset('uploads/banner/banner2.jpeg') }}" alt="">
+                                        <img src="{{ asset('uploads/banner/banner2.jpeg') }}" alt="" class="rounded">
                                     </div>
                                     <div class="cart-details me-2">
                                         <a href="#">

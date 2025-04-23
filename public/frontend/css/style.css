@@ -282,6 +282,8 @@ hr{
     display: none;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: 0.3s;
+    min-width: 140px;
+    text-align: center;
 }
 .main-menu:hover .child-menu{
     display: block;
