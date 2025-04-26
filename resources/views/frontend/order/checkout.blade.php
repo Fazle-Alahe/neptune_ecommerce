@@ -12,6 +12,16 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
+        .checkout-cart {
+            width: 100%;
+            padding: 20px 0 15px;
+            border-bottom: 1px solid rgb(211, 210, 210);
+        }
+
+        .checkout-cart p {
+            margin-bottom: 0;
+        }
+
         .form-section-title {
             font-weight: 600;
             font-size: 1.5rem;
@@ -79,19 +89,20 @@
             transition: 0.3s;
         }
 
-        .coupon-button:hover{
+        .coupon-button:hover {
             color: var(--violet);
             background-color: white;
         }
 
-        .list-group-item{
-            border:none;
+        .list-group-item {
+            border: none;
         }
 
-        .checkout-total{
+        .checkout-total {
             border-top: 1px solid var(--darkblue) !important;
         }
-        .checkout-total span{
+
+        .checkout-total span {
             color: var(--darkblue);
             font-size: 20px;
             font-weight: 600;
@@ -165,12 +176,12 @@
                             <label class="form-label">Shipping Area <span class="required-star">*</span></label>
                             <div class="d-flex radio-group">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="shippingArea" id="insideCity"
+                                    <input class="form-check-input" type="radio" name="shippingArea" id="insideCity" value="80"
                                         checked>
                                     <label class="form-check-label" for="insideCity">Inside Dhaka</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="shippingArea" id="outsideCity">
+                                    <input class="form-check-input" type="radio" name="shippingArea" id="outsideCity" value="100">
                                     <label class="form-check-label" for="outsideCity">Outside Dhaka</label>
                                 </div>
                             </div>
@@ -208,77 +219,67 @@
                 <div class="checkout-card">
                     <div class="form-section-title">Review Your Cart</div>
 
-                    <div class="single-cart d-inline-flex">
-                        <div class="cart-image d-flex align-items-center me-3">
-                            <img src="http://127.0.0.1:8000/uploads/banner/banner1.jpeg" alt="" class="rounded">
+
+                    <div class="checkout-cart d-inline-flex">
+                        <div class="cart-image mx-3">
+                            <img src="{{ asset('uploads/banner/banner1.jpeg') }}" alt="" class="rounded">
                         </div>
                         <div class="cart-details me-2">
                             <a href="#">
-                                <p title="Stylish pink coat">Women T-shirt & pink coat...</p>
+                                <p title="Stylish pink coatcvsdfvgsdgfv">Women T-shirt...</p>
                             </a>
                             <div class="item-quantity d-flex mt-2">
                                 <button class="decrease px-2 d-flex align-items-center">-</button>
                                 <input type="number" value="1" class="quantity text-center mx-2" min="1"
-                                    readonly="">
+                                    readonly>
                                 <button class="increase px-2 d-flex align-items-center">+</button>
                             </div>
                         </div>
                         <div class="cart-price mx-2 text-center">
-                            <svg class="svg-inline--fa fa-trash trash" aria-hidden="true" focusable="false"
-                                data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512" data-fa-i2svg="">
-                                <path fill="currentColor"
-                                    d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z">
-                                </path>
-                            </svg><!-- <i class="fa-solid fa-trash trash"></i> Font Awesome fontawesome.com -->
-                            <p class="pt-2">৳<span>11000</span></p>
+                            <i class="fa-solid fa-trash trash"></i>
+                            <p class="pt-2">&#2547;<span class="price">11000</span></p>
                         </div>
                     </div>
-
-                    <div class="single-cart d-inline-flex">
-                        <div class="cart-image d-flex align-items-center me-3">
-                            <img src="http://127.0.0.1:8000/uploads/banner/banner1.jpeg" alt="" class="rounded">
+                    <div class="checkout-cart d-inline-flex">
+                        <div class="cart-image mx-3">
+                            <img src="{{ asset('uploads/banner/banner3.jpeg') }}" alt="" class="rounded">
                         </div>
                         <div class="cart-details me-2">
                             <a href="#">
-                                <p title="Stylish pink coat">Women T-shirt & pink coat...</p>
+                                <p title="Stylish pink coatcvsdfvgsdgfv">GUCCI HORSEBIT CHAINc...</p>
                             </a>
                             <div class="item-quantity d-flex mt-2">
                                 <button class="decrease px-2 d-flex align-items-center">-</button>
                                 <input type="number" value="1" class="quantity text-center mx-2" min="1"
-                                    readonly="">
+                                    readonly>
                                 <button class="increase px-2 d-flex align-items-center">+</button>
                             </div>
                         </div>
                         <div class="cart-price mx-2 text-center">
-                            <svg class="svg-inline--fa fa-trash trash" aria-hidden="true" focusable="false"
-                                data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512" data-fa-i2svg="">
-                                <path fill="currentColor"
-                                    d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z">
-                                </path>
-                            </svg><!-- <i class="fa-solid fa-trash trash"></i> Font Awesome fontawesome.com -->
-                            <p class="pt-2">৳<span>11000</span></p>
+                            <i class="fa-solid fa-trash trash"></i>
+                            <p class="pt-2">&#2547;<span class="price">21000</span></p>
                         </div>
                     </div>
-
-
-
-                    {{-- <div class="d-flex mb-3">
-                        <img src="{{asset('uploads/banner/banner1.jpeg')}}" alt="sofa" class="rounded me-3">
-                        <div>
-                            <h6 class="mb-0">DuoComfort Sofa Premium</h6>
-                            <small>1x - $20.00</small>
+                    <div class="checkout-cart d-inline-flex">
+                        <div class="cart-image mx-3">
+                            <img src="{{ asset('uploads/banner/banner2.jpeg') }}" alt="" class="rounded">
+                        </div>
+                        <div class="cart-details me-2">
+                            <a href="#">
+                                <p title="Stylish pink coatcvsdfvgsdgfv">Stylish pink coatc...</p>
+                            </a>
+                            <div class="item-quantity d-flex mt-2">
+                                <button class="decrease px-2 d-flex align-items-center">-</button>
+                                <input type="number" value="1" class="quantity text-center mx-2" min="1"
+                                    readonly>
+                                <button class="increase px-2 d-flex align-items-center">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-price mx-2 text-center">
+                            <i class="fa-solid fa-trash trash"></i>
+                            <p class="pt-2">&#2547;<span class="price">22100</span></p>
                         </div>
                     </div>
-
-                    <div class="d-flex mb-3">
-                        <img src="{{asset('uploads/banner/banner2.jpeg')}}" alt="desk" class="rounded me-3">
-                        <div>
-                            <h6 class="mb-0">IronOne Desk</h6>
-                            <small>1x - $25.00</small>
-                        </div>
-                    </div> --}}
 
                     <div class="my-3 coupon-input">
                         <input type="text" class="form-control py-2" placeholder="Coupon code">
@@ -294,7 +295,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between">
                             <span>Shipping</span>
-                            <strong>$5.00</strong>
+                            <strong><span>&#2547;<span class="shipping-charge"></span></span></strong>
                         </li>
                         <li class="list-group-item d-flex justify-content-between">
                             <span>Discount</span>
@@ -302,7 +303,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between checkout-total">
                             <span>Total</span>
-                            <span>$40.00</span>
+                            <span>&#2547;<span class="checkout-subtotal"></span></span>
                         </li>
                     </ul>
 

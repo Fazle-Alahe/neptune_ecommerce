@@ -305,7 +305,7 @@
                                     </div>
                                     <div class="cart-price mx-2 text-center">
                                         <i class="fa-solid fa-trash trash"></i>
-                                        <p class="pt-2">&#2547;<span>11000</span></p>
+                                        <p class="pt-2">&#2547;<span class="price">11000</span></p>
                                     </div>
                                 </div>
                                 <div class="single-cart d-inline-flex">
@@ -325,7 +325,7 @@
                                     </div>
                                     <div class="cart-price mx-2 text-center">
                                         <i class="fa-solid fa-trash trash"></i>
-                                        <p class="pt-2">&#2547;<span>21000</span></p>
+                                        <p class="pt-2">&#2547;<span class="price">21000</span></p>
                                     </div>
                                 </div>
                                 <div class="single-cart d-inline-flex">
@@ -345,7 +345,7 @@
                                     </div>
                                     <div class="cart-price mx-2 text-center">
                                         <i class="fa-solid fa-trash trash"></i>
-                                        <p class="pt-2">&#2547;<span>22100</span></p>
+                                        <p class="pt-2">&#2547;<span class="price">22100</span></p>
                                     </div>
                                 </div>
                             </div>

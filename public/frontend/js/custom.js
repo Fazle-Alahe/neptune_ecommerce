@@ -2,50 +2,50 @@
 
 // cart
 
-$(document).ready(function(){
-  $(".cart").click(function(e){
+$(document).ready(function () {
+  $(".cart").click(function (e) {
     e.stopPropagation();
     $(".cart-content").addClass("cart-toggle");
   });
 
-  $(".cart-close").click(function(e){
+  $(".cart-close").click(function (e) {
     e.stopPropagation();
     $(".cart-content").removeClass("cart-toggle");
   });
 
-  $('body').click(function() {
+  $('body').click(function () {
     $(".cart-content").removeClass("cart-toggle");
   });
 
-  $(".cart-content").click(function(e) {
+  $(".cart-content").click(function (e) {
     e.stopPropagation();
   });
 });
 
 // hamburger
-$(document).ready(function(){
-  $(".bar-icon").click(function(e){
+$(document).ready(function () {
+  $(".bar-icon").click(function (e) {
     e.stopPropagation();
     $(".hamburger-menu").addClass("hamburger-active");
   });
 
-  $(".close-button").click(function(e){
+  $(".close-button").click(function (e) {
     e.stopPropagation();
     $(".hamburger-menu").removeClass("hamburger-active");
   });
 
-  $('body').click(function() {
+  $('body').click(function () {
     $(".hamburger-menu").removeClass("hamburger-active");
   });
 
-  $(".hamburger-menu").click(function(e) {
+  $(".hamburger-menu").click(function (e) {
     e.stopPropagation();
   });
 
 });
 
 // banner slick
-$(document).ready(function(){
+$(document).ready(function () {
   $('.banner').slick({
     // dots: true,
     infinite: true,
@@ -55,104 +55,118 @@ $(document).ready(function(){
     autoplaySpeed: 3000,
     fade: true,
     cssEase: 'linear'
-    });
+  });
 });
 
 // form-button
-$(document).ready(function(){
-  $(".form-button").click(function(e){
+$(document).ready(function () {
+  $(".form-button").click(function (e) {
     e.stopPropagation();
-    if($(".input-form, .arrow").hasClass("block")){
+    if ($(".input-form, .arrow").hasClass("block")) {
       $(".input-form, .arrow").removeClass("block");
     }
-    else{
+    else {
       $(".input-form, .arrow").addClass("block");
     }
   });
 
-  $('body').click(function() {
+  $('body').click(function () {
     $(".input-form, .arrow").removeClass("block");
   });
 
-  $(".input-form, .arrow").click(function(e) {
+  $(".input-form, .arrow").click(function (e) {
     e.stopPropagation();
   });
 
 });
 
 // banner2 sidebar
-$(document).ready(function() {
-  $(".fa-chevron-down").click(function() {
+$(document).ready(function () {
+  $(".fa-chevron-down").click(function () {
     // alert();
     var $childMenu = $(this).closest('.category').find('.child-category');
     // console.log("hello");
     if (!$childMenu.hasClass("toggle")) {
-      $('.child-category').removeClass('toggle').slideUp(); 
+      $('.child-category').removeClass('toggle').slideUp();
       $childMenu.addClass('toggle').slideDown();
     } else {
-      $childMenu.removeClass('toggle').slideUp(); 
+      $childMenu.removeClass('toggle').slideUp();
     }
   });
 });
 
 
 // mobile-hamburger-submenu
-$(document).ready(function() {
-  $(".hamburger-chevron").click(function() {
+$(document).ready(function () {
+  $(".hamburger-chevron").click(function () {
     // alert();
     var $childMenu = $(this).closest('.main-menu').find('.child-menu');
     // console.log("hello");
     if (!$childMenu.hasClass("toggle")) {
-      $('.child-menu').removeClass('toggle').slideUp(); 
+      $('.child-menu').removeClass('toggle').slideUp();
       $childMenu.addClass('toggle').slideDown();
     } else {
-      $childMenu.removeClass('toggle').slideUp(); 
+      $childMenu.removeClass('toggle').slideUp();
     }
   });
 });
 
 
 // cart update
+$(document).ready(function () {
 
-$(document).ready(function(){
+  function primeFunction(cartParentClass, subTotal) {
 
-// calculate total
-function updateTotals(){
-  let subtotal = 0;
-  $('.single-cart').each(function (){
-    let productQuantity = parseInt($(this).find('.quantity').val());
-    let productPrice = $(this).find('span').text();
-    subtotal += productQuantity * productPrice; 
-  });
+    // calculate total
+    function updateTotals() {
+      let subtotal = 0;
+        $(cartParentClass).each(function () {
+          let productQuantity = parseInt($(this).find('.quantity').val());
+          let productPrice = parseFloat($(this).find('.price').text());
+          subtotal += productQuantity * productPrice;
+        });
 
-  $('.subtotal-m').text(subtotal);
-}
-
-// increase quantity
-  $('.increase').click(function(){
-    let inputQuantity = $(this).siblings('.quantity');
-    inputQuantity.val(parseInt(inputQuantity.val()) + 1 );
-    updateTotals();
-  });
-
-// decrease quantity
-  $('.decrease').click(function(){
-    let inputQuantity = $(this).siblings('.quantity');
-    if(inputQuantity.val() > 1){
-      inputQuantity.val(parseInt(inputQuantity.val()) - 1 );
+      $(subTotal).text(subtotal.toFixed(2));
     }
+
+    //shipping charge
+    function shippingCharge(shipping) {
+      $(shipping).click(function () {
+        let charge = parseInt($(this).val());
+        $('.shipping-charge').text(charge.toFixed(2));
+      });
+    }
+    shippingCharge('#insideCity');
+    shippingCharge('#outsideCity');
+
+
+    // Scoped increase/decrease/trash handlers
+    $(cartParentClass).on('click', '.increase', function () {
+      let inputQuantity = $(this).siblings('.quantity');
+      inputQuantity.val(parseInt(inputQuantity.val()) + 1);
+      updateTotals();
+    });
+
+    $(cartParentClass).on('click', '.decrease', function () {
+      let inputQuantity = $(this).siblings('.quantity');
+      if (parseInt(inputQuantity.val()) > 1) {
+        inputQuantity.val(parseInt(inputQuantity.val()) - 1);
+      }
+      updateTotals();
+    });
+
+    $(cartParentClass).on('click', '.trash', function () {
+      $(this).closest(cartParentClass).remove();
+      updateTotals();
+    });
+
     updateTotals();
-  });
+  }
 
-//cart item remove
-  $('.trash').click(function(){
-    // alert();
-     $(this).closest('.single-cart').remove();
-     updateTotals();
-  });
-
-  updateTotals();
+  primeFunction('.single-cart', '.subtotal-m');
+  primeFunction('.checkout-cart', '.checkout-subtotal');
 });
+
 
 
 // shop slick
@@ -206,11 +220,11 @@ $(document).ready(function () {
   $(".eye").click(function () {
     var input = $("#" + $(this).attr("data-target"));
 
-    if(input.attr("type") === 'password'){
+    if (input.attr("type") === 'password') {
       input.attr("type", "text");
       $(this).attr("src", $(this).attr("data-hidden"));
     }
-    else{ 
+    else {
       input.attr("type", "password");
       $(this).attr("src", $(this).attr("data-visible"));
     }
