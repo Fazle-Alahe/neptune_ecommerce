@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HomeController;
@@ -31,6 +32,14 @@ Route::middleware([AuthMiddleware::class])->group(function () {
     Route::post('/user/select/delete', [UserController::class, 'user_select_delete'])->name('user.select.delete');
 
     Route::get('/user/logout', [HomeController::class, 'user_logout'])->name('user.logout');
+
+    // category
+    Route::get('add/category', [CategoryController::class, 'add_category'])->name('add.category');
+    Route::post('category/store', [CategoryController::class, 'category_store'])->name('category.store');
+    Route::get('category/list', [CategoryController::class, 'category_list'])->name('category.list');
+    Route::get('/category/active/{id}', [CategoryController::class, 'category_active'])->name('category.active');
+    Route::get('/category/edit/{id}', [CategoryController::class, 'category_edit'])->name('category.edit');
+
 });
 Route::get('/user/login', [HomeController::class, 'user_login'])->name('user.login');
 Route::post('/user/login/post', [HomeController::class, 'user_login_post'])->name('user.login.post');
