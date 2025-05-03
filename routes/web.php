@@ -34,11 +34,18 @@ Route::middleware([AuthMiddleware::class])->group(function () {
     Route::get('/user/logout', [HomeController::class, 'user_logout'])->name('user.logout');
 
     // category
-    Route::get('add/category', [CategoryController::class, 'add_category'])->name('add.category');
-    Route::post('category/store', [CategoryController::class, 'category_store'])->name('category.store');
-    Route::get('category/list', [CategoryController::class, 'category_list'])->name('category.list');
+    Route::get('/add/category', [CategoryController::class, 'add_category'])->name('add.category');
+    Route::post('/category/store', [CategoryController::class, 'category_store'])->name('category.store');
+    Route::get('/category/list', [CategoryController::class, 'category_list'])->name('category.list');
     Route::get('/category/active/{id}', [CategoryController::class, 'category_active'])->name('category.active');
     Route::get('/category/edit/{id}', [CategoryController::class, 'category_edit'])->name('category.edit');
+    Route::post('/category/update/{id}', [CategoryController::class, 'category_update'])->name('category.update');
+    Route::get('/category/destroy/{id}', [CategoryController::class, 'category_destroy'])->name('category.destroy');
+    Route::get('/trash/category', [CategoryController::class, 'trash_category'])->name('trash.category');
+    Route::get('/category/restore/{id}', [CategoryController::class, 'category_restore'])->name('category.restore');
+    Route::get('/category/delete/{id}', [CategoryController::class, 'category_delete'])->name('category.delete');
+
+    // Route::get('/search', [CategoryController::class, 'search'])->name('search');
 
 });
 Route::get('/user/login', [HomeController::class, 'user_login'])->name('user.login');

@@ -132,7 +132,7 @@
                         <div class="collapse" id="menuIcons">
                             <ul class="sub-menu">
                                 <li class="menu-item">
-                                    <a class='menu-link' href='icons-feather.html'>
+                                    <a class='menu-link' href='{{ route('trash.category') }}'>
                                         <span class="menu-text">Trash Category</span>
                                     </a>
                                 </li>

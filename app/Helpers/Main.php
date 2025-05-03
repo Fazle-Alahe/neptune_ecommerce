@@ -64,29 +64,6 @@ class Main
         return $html;
     }
 
-    public static function admin_form($input_name, $label_name, $type, $placeholder = null, $model = null)
-    {
-        // dd(old($input_name), $model);
-        $errors = session('errors');
-        $hasError = $errors && $errors->has($input_name);
-        $errorClass = $hasError ? 'is-invalid' : '';
-        $value = old($input_name, $model->$input_name ?? '');
-
-
-        $html = '<div class="mb-3">';
-        $html .= '  <label for="' . $input_name . '" class="form-label">' . $label_name . '</label><br>';
-        $html .= '<input type="' . $type . '" name="' . $input_name . '" class="form-control ' . $errorClass . '" placeholder="' . $placeholder . '" value="' . e($value) . '">';
-        // If there's an error, show it under the input
-        if ($hasError) {
-            $html .= '<div class="text-danger invalid-feedback">';
-            $html .= $errors->first($input_name);
-            $html .= '</div>';
-        }
-        $html .= '</div>';
-
-
-        return $html;
-    }
 
     public static function password_form($name, $id, $input_name, $placeholder = null)
     {

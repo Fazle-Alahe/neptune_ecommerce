@@ -7,8 +7,8 @@
                 <div class="card-header d-flex justify-content-between">
                     <h3>Category List</h3>
                     <div class="quick-access">
-                        <a href="{{ route('trash.category') }}" class="btn btn-danger">Trash Category</a>
                         <a href="{{ route('add.category') }}" class="btn btn-success">Add Category</a>
+                        <a href="{{ route('category.list') }}" class="btn btn-info">Category List</a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -55,16 +55,15 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{ route('category.active', $category->id) }}"
-                                        class="btn btn-soft-{{ $category->status == 0 ? 'success' : 'secondary' }}">
+                                    <a href="#"class="btn btn-soft-{{ $category->status == 0 ? 'success' : 'secondary' }}">
                                         {{ $category->status == 0 ? 'Active' : 'Dective' }}
                                     </a>
                                 </td>
                                 <td>
-                                    <a title="edit" href="{{ route('category.edit', $category->id) }}"
-                                        class="btn btn-primary"><i class="bx bx-edit"></i></a>
-                                    <a title="soft-delete" href="{{ route('category.destroy', $category->id) }}"
-                                        class="btn btn-warning"><i class="bx bx-trash"></i></a>
+                                    <a title="restore" href="{{ route('category.restore', $category->id) }}"
+                                        class="btn btn-success"><i class="bx bx-refresh"></i></a>
+                                    <a title="permanent-delete" href="{{ route('category.delete', $category->id) }}"
+                                        class="btn btn-danger"><i class="bx bx-trash"></i></a>
                                 </td>
                             </tr>
                         @empty
