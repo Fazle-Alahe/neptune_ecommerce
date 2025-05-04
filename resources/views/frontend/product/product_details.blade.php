@@ -20,18 +20,18 @@
                           <li data-thumb="{{asset('uploads/banner/banner4.jpeg')}}" data-src="largeImage4">
                             <img src="{{asset('uploads/banner/banner4.jpeg')}}" />
                           </li>
-                          <li data-thumb="{{asset('uploads/banner/banner3.jpeg')}}" data-src="largeImage5">
+                          {{-- <li data-thumb="{{asset('uploads/banner/banner3.jpeg')}}" data-src="largeImage5">
                             <img src="{{asset('uploads/banner/banner3.jpeg')}}" />
                           </li>
                           <li data-thumb="{{asset('uploads/banner/banner4.jpeg')}}" data-src="largeImage4">
                             <img src="{{asset('uploads/banner/banner4.jpeg')}}" />
-                          </li>
-                          <li data-thumb="{{asset('uploads/banner/banner3.jpeg')}}" data-src="largeImage5">
+                          </li> --}}
+                          {{-- <li data-thumb="{{asset('uploads/banner/banner3.jpeg')}}" data-src="largeImage5">
                             <img src="{{asset('uploads/banner/banner3.jpeg')}}" />
                           </li>
                           <li data-thumb="{{asset('uploads/banner/banner3.jpeg')}}" data-src="largeImage5">
                             <img src="{{asset('uploads/banner/banner3.jpeg')}}" />
-                          </li>
+                          </li> --}}
                         </ul>
                     </div>
                 </div>
