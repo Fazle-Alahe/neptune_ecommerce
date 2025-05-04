@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Neptune</title>
+    {{-- <title>Neptune</title> --}}
+    @yield('title')
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/slick/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/slick/slick-theme.css') }}">
@@ -290,7 +291,7 @@
                             <div class="cart-items mb-3">
                                 <div class="single-cart d-inline-flex">
                                     <div class="cart-image mx-3">
-                                        <img src="{{ asset('uploads/banner/banner1.jpeg') }}" alt="">
+                                        <img src="{{ asset('uploads/banner/banner1.jpeg') }}" alt="" class="rounded">
                                     </div>
                                     <div class="cart-details me-2">
                                         <a href="#">
@@ -305,12 +306,12 @@
                                     </div>
                                     <div class="cart-price mx-2 text-center">
                                         <i class="fa-solid fa-trash trash"></i>
-                                        <p class="pt-2">&#2547;<span>11000</span></p>
+                                        <p class="pt-2">&#2547;<span class="price">11000</span></p>
                                     </div>
                                 </div>
                                 <div class="single-cart d-inline-flex">
                                     <div class="cart-image mx-3">
-                                        <img src="{{ asset('uploads/banner/banner3.jpeg') }}" alt="">
+                                        <img src="{{ asset('uploads/banner/banner3.jpeg') }}" alt="" class="rounded">
                                     </div>
                                     <div class="cart-details me-2">
                                         <a href="#">
@@ -325,12 +326,12 @@
                                     </div>
                                     <div class="cart-price mx-2 text-center">
                                         <i class="fa-solid fa-trash trash"></i>
-                                        <p class="pt-2">&#2547;<span>21000</span></p>
+                                        <p class="pt-2">&#2547;<span class="price">21000</span></p>
                                     </div>
                                 </div>
                                 <div class="single-cart d-inline-flex">
                                     <div class="cart-image mx-3">
-                                        <img src="{{ asset('uploads/banner/banner2.jpeg') }}" alt="">
+                                        <img src="{{ asset('uploads/banner/banner2.jpeg') }}" alt="" class="rounded">
                                     </div>
                                     <div class="cart-details me-2">
                                         <a href="#">
@@ -345,7 +346,7 @@
                                     </div>
                                     <div class="cart-price mx-2 text-center">
                                         <i class="fa-solid fa-trash trash"></i>
-                                        <p class="pt-2">&#2547;<span>22100</span></p>
+                                        <p class="pt-2">&#2547;<span class="price">22100</span></p>
                                     </div>
                                 </div>
                             </div>

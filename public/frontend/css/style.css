@@ -282,6 +282,8 @@ hr{
     display: none;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: 0.3s;
+    min-width: 140px;
+    text-align: center;
 }
 .main-menu:hover .child-menu{
     display: block;
@@ -296,18 +298,19 @@ hr{
 .bottom-header .main-menu a{
     border-right: 1px solid rgb(198, 193, 193);
 }
-.bottom-header li a:hover{
-    color: var(--theme);
-}
 .child-menu li{
     background-color: #fff;
     font-size: 15px;
     border-bottom: 1px solid rgb(198, 193, 193);
     transition: 0.3s;
+    cursor: pointer;
     z-index: 10;
 }
 .child-menu li:hover{
     background-color: var(--pinkwhite);
+}
+.child-menu li:hover a{
+    color: var(--theme);
 }
 .child-menu a{
     border-right: none !important;

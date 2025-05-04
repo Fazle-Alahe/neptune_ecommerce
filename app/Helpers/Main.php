@@ -54,22 +54,23 @@ class Main
         return $html;
     }
 
-    public static function regular_form($input_name, $name, $type, $placeholder = null)
+    public static function regular_form($input_name, $label_name, $type, $placeholder = null)
     {
         $html = '<div class="mb-3">';
-        $html .= '  <label for="' . $input_name . '" class="form_label">' . $name . '</label><br>';
+        $html .= '  <label for="' . $input_name . '" class="form_label">' . $label_name . '</label><br>';
         $html .= '    <input type="' . $type . '" name="' . $input_name . '" class="form_input" placeholder="' . $placeholder . '">';
         $html .= '</div>';
 
         return $html;
     }
 
+
     public static function password_form($name, $id, $input_name, $placeholder = null)
     {
         $html = '<div class="mb-3">';
         $html .= '<label for="password" class="form_label">' . $name . '</label><br>';
         $html .= '<div class="eye_password">';
-        $html .= '<input type="password" id="' . $id . '" name="' . $input_name . '" class="form_input" placeholder="' . $placeholder . '">';
+        $html .= '<input type="password" id="' . $id . '" name="' . $input_name . '" class="form_input @error(' . $input_name . ') is-invalid @enderror" placeholder="' . $placeholder . '">';
         $html .= '<img class="eye" 
                 src="' . asset('uploads/eye.png') . '";
                 data-target="' . $id . '" 
@@ -113,5 +114,19 @@ class Main
         $html .= ' </div>';
         return $html;
     }
-
 }
+// if (!function_exists('toast')) {
+//     /**
+//      * Flash a toast notification to the session.
+//      *
+//      * @param string $type success|error|warning|info
+//      * @param string $message The message to display
+//      */
+//     function toast($type, $message)
+//     {
+//         session()->flash('toast', [
+//             'type' => $type,
+//             'message' => $message
+//         ]);
+//     }
+// }

@@ -32,6 +32,20 @@
 
     <script src="{{ asset('admin/assets/js/config.js') }}"></script>
 </head>
+{{-- @if(session('toast'))
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: '{{ session('toast')['type'] }}',
+            title: '{{ session('toast')['message'] }}',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+        });
+    </script>
+@endif --}}
 
 <body>
 
@@ -94,14 +108,32 @@
                     <li class="menu-item">
                         <a href="#menuIcons" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
                             <span class="menu-icon"><i class="bx bx-aperture"></i></span>
-                            <span class="menu-text"> Icons </span>
+                            <span class="menu-text"> Category </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <div class="collapse" id="menuIcons">
                             <ul class="sub-menu">
                                 <li class="menu-item">
-                                    <a class='menu-link' href='icons-feather.html'>
-                                        <span class="menu-text">Feather Icons</span>
+                                    <a class='menu-link' href='{{ route('add.category') }}'>
+                                        <span class="menu-text">Add Category</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="menuIcons">
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a class='menu-link' href='{{ route('category.list') }}'>
+                                        <span class="menu-text">Category List</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="menuIcons">
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a class='menu-link' href='{{ route('trash.category') }}'>
+                                        <span class="menu-text">Trash Category</span>
                                     </a>
                                 </li>
                             </ul>
