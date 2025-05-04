@@ -275,6 +275,9 @@ hr{
 .main-menu{
     position: relative;
 }
+.main-menu:hover .parent{
+    color: var(--theme);
+}
 .child-menu{
     position: absolute;
     top: 34px;

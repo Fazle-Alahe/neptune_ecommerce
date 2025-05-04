@@ -375,7 +375,7 @@
                 <div class="close-button text-right">
                     <i class="fa-solid fa-xmark hamburger-close"></i>
                 </div>
-                <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i
+                <li class="me-4 py-1 main-menu"><a href="#" class="pe-4 parent">Fashion<i
                             class="fa-solid fa-chevron-down hamburger-chevron ms-1"></i></a>
                     <div class="child-menu">
                         <ul>
@@ -385,7 +385,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i
+                <li class="me-4 py-1 main-menu"><a href="#" class="pe-4 parent">Fashion<i
                             class="fa-solid fa-chevron-down hamburger-chevron ms-1"></i></a>
                     <div class="child-menu">
                         <ul>
@@ -396,7 +396,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion<i
+                <li class="me-4 py-1 main-menu"><a href="#" class="pe-4 parent">Fashion<i
                             class="fa-solid fa-chevron-down hamburger-chevron ms-1"></i></a>
                     <div class="child-menu">
                         <ul>
@@ -407,9 +407,9 @@
                         </ul>
                     </div>
                 </li>
-                <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion</a></li>
-                <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion</a></li>
-                <li class="me-4 py-1 main-menu"><a href="#" class="pe-4">Fashion</a></li>
+                <li class="me-4 py-1 main-menu"><a href="#" class="pe-4 parent">Fashion</a></li>
+                <li class="me-4 py-1 main-menu"><a href="#" class="pe-4 parent">Fashion</a></li>
+                <li class="me-4 py-1 main-menu"><a href="#" class="pe-4 parent">Fashion</a></li>
             </ul>
         </div>
 

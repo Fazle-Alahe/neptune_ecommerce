@@ -120,6 +120,7 @@
                     <div class="banner">
                         <div class="slider">
                             <img src="{{ asset('uploads/banner/banner1.jpeg') }}" alt="">
+                            <img src="{{ asset('uploads/banner/banner1.jpeg') }}" alt="">
                         </div>
                         <div class="slider">
                             <img src="{{ asset('uploads/banner/banner2.jpeg') }}" alt="">
